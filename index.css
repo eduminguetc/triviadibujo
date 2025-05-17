@@ -1,1 +1,26 @@
+/* index.css */
+/* Estilos globales adicionales si son necesarios, aunque Tailwind CSS debería cubrir la mayoría. */
+/* Por ejemplo, podríamos añadir un estilo base al body si no se usa Tailwind para todo. */
+
+/* Animación sutil para la carga de la tarjeta de pregunta */
+@keyframes fadeInCard {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#question-card, #options-container button {
+    animation: fadeInCard 0.5s ease-out forwards;
+}
+
+/* Estilo para los botones de opción para que tengan un tamaño mínimo y mejor feedback */
+.option-button {
+    @apply w-full p-4 border-2 border-slate-300 rounded-lg text-left text-gray-700 bg-white hover:bg-sky-50 hover:border-sky-400 transition-all duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-sky-500 focus:ring-opacity-50;
+    min-height: 60px; /* Asegura una altura mínima para mejor clic/tap */
+}
 
