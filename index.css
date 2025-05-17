@@ -1,26 +1,51 @@
 /* index.css */
-/* Estilos globales adicionales si son necesarios, aunque Tailwind CSS debería cubrir la mayoría. */
-/* Por ejemplo, podríamos añadir un estilo base al body si no se usa Tailwind para todo. */
 
-/* Animación sutil para la carga de la tarjeta de pregunta */
-@keyframes fadeInCard {
+/* Animación sutil para la carga de elementos.
+  Se aplica al contenedor del texto de la pregunta y al contenedor que envuelve las opciones.
+*/
+@keyframes fadeInElement {
     from {
         opacity: 0;
-        transform: translateY(20px);
+        transform: translateY(15px); /* Inicia ligeramente abajo y transparente */
     }
     to {
         opacity: 1;
-        transform: translateY(0);
+        transform: translateY(0); /* Termina en su posición normal y opaco */
     }
 }
 
-#question-card, #options-container button {
-    animation: fadeInCard 0.5s ease-out forwards;
+/* Aplicar la animación a los contenedores especificados */
+#question-text-container, #options-wrapper {
+    animation: fadeInElement 0.5s ease-out forwards;
 }
 
-/* Estilo para los botones de opción para que tengan un tamaño mínimo y mejor feedback */
+/*
+  Estilo para los botones de opción.
+  Cada botón es un recuadro individual con fondo gris claro y sombra.
+  Utiliza clases de Tailwind CSS mediante @apply para una fácil integración.
+*/
 .option-button {
-    @apply w-full p-4 border-2 border-slate-300 rounded-lg text-left text-gray-700 bg-white hover:bg-sky-50 hover:border-sky-400 transition-all duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-sky-500 focus:ring-opacity-50;
-    min-height: 60px; /* Asegura una altura mínima para mejor clic/tap */
+    @apply w-full p-3 md:p-4 border border-gray-300 rounded-lg text-left text-gray-700 
+           bg-gray-100  /* Fondo gris claro (Tailwind: gray-100) */
+           hover:bg-gray-200 hover:border-gray-400 /* Efecto hover sutil: gris más oscuro */
+           transition-all duration-200 ease-in-out /* Transición suave para efectos hover/focus */
+           focus:outline-none focus:ring-2 focus:ring-sky-400 focus:ring-opacity-50 /* Estilo de foco para accesibilidad */
+           shadow-md; /* Sombra moderada para dar efecto de tarjeta elevada */
+    min-height: 60px; /* Altura mínima para asegurar que los botones sean fáciles de clickear/tocar */
+    font-size: 0.95rem; /* Tamaño de fuente ligeramente ajustado para las opciones */
 }
 
+/* Estilo para el texto de la pregunta para mejorar la legibilidad si es largo */
+#question-text {
+    line-height: 1.5; /* Interlineado aumentado para mejor lectura */
+}
+
+/* Nota: Los estilos para los contadores de preguntas y puntuación 
+  (#question-counter, #score-counter) ya están definidos directamente 
+  en el archivo HTML mediante clases de Tailwind CSS y se conservan.
+
+  Los estilos para el feedback visual de las respuestas (.correct-answer, .selected-incorrect)
+  también están definidos en la etiqueta <style> dentro del archivo HTML para asegurar
+  que tengan la especificidad necesaria para sobrescribir los estilos base de .option-button
+  cuando sea necesario (usando !important).
+*/
