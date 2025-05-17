@@ -22,12 +22,14 @@
 /*
   Estilo para los botones de opción.
   Cada botón es un recuadro individual con fondo gris claro y sombra.
-  Utiliza clases de Tailwind CSS mediante @apply para una fácil integración.
+  Se eliminó el borde visible en estado normal para un look más de "tarjeta".
+  El borde aparece en hover para feedback.
 */
 .option-button {
-    @apply w-full p-3 md:p-4 border border-gray-300 rounded-lg text-left text-gray-700 
+    @apply w-full p-3 md:p-4 rounded-lg text-left text-gray-700 
            bg-gray-100  /* Fondo gris claro (Tailwind: gray-100) */
-           hover:bg-gray-200 hover:border-gray-400 /* Efecto hover sutil: gris más oscuro */
+           /* No hay borde explícito en el estado normal, confiamos en el fondo y la sombra */
+           hover:bg-gray-200 hover:border hover:border-gray-300 /* Efecto hover: gris más oscuro y borde sutil */
            transition-all duration-200 ease-in-out /* Transición suave para efectos hover/focus */
            focus:outline-none focus:ring-2 focus:ring-sky-400 focus:ring-opacity-50 /* Estilo de foco para accesibilidad */
            shadow-md; /* Sombra moderada para dar efecto de tarjeta elevada */
