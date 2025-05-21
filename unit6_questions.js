@@ -302,7 +302,7 @@ export const unit6Questions = [
   {
     id: 'u6q24',
     unit: 6,
-    questionText: "Para crear una vista en perspectiva de un modelo 3D en AutoCAD, se puede utilizar el comando `CAMARA` o `VISTADIN` (DVIEW) con la opción:",
+    questionText: "Para crear una vista en perspectiva de un modelo 3D en AutoCAD, se puede utilizar el comando `VISTADIN` (DVIEW) con la opción:",
     options: [
       "Paralela",
       "Ortogonal",
@@ -519,5 +519,266 @@ export const unit6Questions = [
     ],
     correctAnswerIndex: 2,
     explanation: "La Vista Preliminar muestra una previsualización de cómo quedará el dibujo en el papel o archivo de salida según la configuración de trazado actual, permitiendo detectar errores antes de la impresión final."
+  },
+  // Nuevas 20 preguntas para la Unidad 6
+  {
+    id: 'u6q41',
+    unit: 6,
+    questionText: "Al imprimir un plano desde AutoCAD, la opción 'Configuraciones de página' permite:",
+    options: [
+      "Cambiar el tipo de licencia de AutoCAD.",
+      "Guardar y reutilizar conjuntos de parámetros de impresión.",
+      "Ajustar la velocidad del procesador.",
+      "Seleccionar el color de la interfaz de AutoCAD."
+    ],
+    correctAnswerIndex: 1,
+    explanation: "Las configuraciones de página permiten guardar colecciones de parámetros de trazado (impresora, tamaño de papel, estilo de trazado, etc.) para reutilizarlos fácilmente."
+  },
+  {
+    id: 'u6q42',
+    unit: 6,
+    questionText: "El modelado de sólidos en AutoCAD se basa en la tecnología CSG, que significa:",
+    options: [
+      "Curvas Suaves Geométricas.",
+      "Control de Superficies Generales.",
+      "Geometría de Construcción de Sólidos.",
+      "Sistema de Coordenadas Globales."
+    ],
+    correctAnswerIndex: 2,
+    explanation: "CSG (Constructive Solid Geometry) es una técnica de modelado de sólidos donde formas complejas se crean combinando primitivas geométricas simples mediante operaciones booleanas."
+  },
+  {
+    id: 'u6q43',
+    unit: 6,
+    questionText: "Si se desea crear un objeto 3D con forma de tubería o pasamanos en AutoCAD, ¿qué comando sería adecuado?",
+    options: [
+      "SOLEVACION (LOFT)",
+      "BARRIDO (SWEEP)",
+      "EXTRUSION (EXT)",
+      "REVOLUCION (REV)"
+    ],
+    correctAnswerIndex: 1,
+    explanation: "El comando `BARRIDO` (SWEEP) es ideal para crear formas como tuberías, ya que permite extruir un perfil (ej. un círculo) a lo largo de una trayectoria (ej. una línea o curva)."
+  },
+  {
+    id: 'u6q44',
+    unit: 6,
+    questionText: "La principal diferencia entre un modelo de sólidos y uno de superficies es que el de sólidos:",
+    options: [
+      "No puede tener formas curvas.",
+      "Define un volumen macizo con propiedades de masa.",
+      "Es menos preciso para la fabricación.",
+      "Solo se puede ver en estructura alámbrica."
+    ],
+    correctAnswerIndex: 1,
+    explanation: "Un modelo de sólidos representa un volumen completo y cerrado, lo que permite calcular propiedades como masa y volumen, a diferencia de un modelo de superficies que solo define las caras exteriores."
+  },
+  {
+    id: 'u6q45',
+    unit: 6,
+    questionText: "El comando `SOLPROF` en AutoCAD se utiliza para:",
+    options: [
+      "Crear perfiles de suelo para análisis geotécnico.",
+      "Proyectar el perfil de sólidos 3D en un plano 2D, separando líneas visibles y ocultas.",
+      "Editar las propiedades de los sólidos.",
+      "Convertir un sólido en una superficie."
+    ],
+    correctAnswerIndex: 1,
+    explanation: "El comando `SOLPROF` (Perfil de Sólido) crea una representación 2D del perfil de un objeto 3D en la vista actual, generando automáticamente capas para las líneas visibles y ocultas."
+  },
+  {
+    id: 'u6q46',
+    unit: 6,
+    questionText: "Al utilizar software de edición de imágenes para mejorar un render, una tarea común es:",
+    options: [
+      "Modificar la geometría 3D del modelo.",
+      "Añadir o mejorar elementos como cielos, vegetación o personas.",
+      "Recalcular las sombras proyectadas.",
+      "Cambiar las unidades de medida del proyecto."
+    ],
+    correctAnswerIndex: 1,
+    explanation: "El software de edición de imágenes como Photoshop se usa frecuentemente para añadir elementos de entorno (cielos, vegetación, personas) a los renders, mejorando su realismo y contexto."
+  },
+  {
+    id: 'u6q47',
+    unit: 6,
+    questionText: "La 'escultura digital' es una técnica de modelado 3D que se asocia más comúnmente con:",
+    options: [
+      "Modelado de sólidos CSG.",
+      "Modelado de mallas (Mesh Modeling).",
+      "Dibujo de planos 2D.",
+      "Creación de diagramas de flujo."
+    ],
+    correctAnswerIndex: 1,
+    explanation: "La escultura digital, que permite modelar formas orgánicas de manera similar a la arcilla, se realiza típicamente sobre modelos de mallas poligonales."
+  },
+  {
+    id: 'u6q48',
+    unit: 6,
+    questionText: "Un 'array de primitivas' y un 'scene graph' son conceptos relacionados con:",
+    options: [
+      "La impresión de planos en AutoCAD.",
+      "La estructura y composición de una escena 3D para renderizado.",
+      "La gestión de capas en dibujos 2D.",
+      "La configuración de estilos de cota."
+    ],
+    correctAnswerIndex: 1,
+    explanation: "Estos términos se refieren a cómo se estructuran y organizan los objetos geométricos (primitivas) dentro de una escena 3D para su posterior procesamiento y renderizado."
+  },
+  {
+    id: 'u6q49',
+    unit: 6,
+    questionText: "¿Cuál de los siguientes NO es un tipo de tecnología de modelado 3D mencionado en la unidad?",
+    options: [
+      "Modelado de sólidos.",
+      "Escultura digital.",
+      "Modelado paramétrico.",
+      "Modelado de texturas procedurales."
+    ],
+    correctAnswerIndex: 3,
+    explanation: "Si bien las texturas procedurales son parte del renderizado, 'modelado de texturas procedurales' no se menciona como una tipología principal de modelación geométrica 3D en la unidad, a diferencia de sólidos, escultura y paramétrico."
+  },
+  {
+    id: 'u6q50',
+    unit: 6,
+    questionText: "El comando `CONVASOLIDO` en AutoCAD permite convertir:",
+    options: [
+      "Un sólido en una imagen 2D.",
+      "Objetos como superficies o mallas gruesas en sólidos 3D.",
+      "Un archivo PDF en un dibujo DWG.",
+      "Un texto en un objeto de sombreado."
+    ],
+    correctAnswerIndex: 1,
+    explanation: "El comando `CONVASOLIDO` (CONVTOSOLID) intenta convertir objetos elegibles como superficies cerradas o mallas gruesas en objetos sólidos 3D."
+  },
+  {
+    id: 'u6q51',
+    unit: 6,
+    questionText: "Al obtener perspectivas de modelos 3D, ¿qué característica visual principal las diferencia de las vistas ortogonales?",
+    options: [
+      "Todas las líneas paralelas permanecen paralelas.",
+      "Los objetos lejanos parecen más pequeños y las líneas paralelas fugan.",
+      "No se pueden mostrar materiales ni texturas.",
+      "Solo se pueden ver en blanco y negro."
+    ],
+    correctAnswerIndex: 1,
+    explanation: "Las vistas en perspectiva simulan la visión humana, donde los objetos más distantes se ven más pequeños y las líneas paralelas que se alejan del observador parecen converger en puntos de fuga."
+  },
+  {
+    id: 'u6q52',
+    unit: 6,
+    questionText: "El software Corel Draw es conocido principalmente por ser una aplicación de:",
+    options: [
+      "Retoque fotográfico.",
+      "Dibujo vectorial.",
+      "Modelado 3D de sólidos.",
+      "Edición de audio."
+    ],
+    correctAnswerIndex: 1,
+    explanation: "Corel Draw es un software de diseño gráfico ampliamente utilizado para la creación y edición de gráficos vectoriales."
+  },
+  {
+    id: 'u6q53',
+    unit: 6,
+    questionText: "Una 'maqueta virtual' en 3D se refiere a:",
+    options: [
+      "Una simulación física de la resistencia de la maqueta.",
+      "Un modelo 3D detallado del proyecto visualizado en el ordenador.",
+      "Una fotografía de una maqueta física.",
+      "Un conjunto de planos 2D impresos a escala."
+    ],
+    correctAnswerIndex: 1,
+    explanation: "Una maqueta virtual es un modelo tridimensional completo y detallado del proyecto, creado y visualizado mediante software, que permite explorarlo interactivamente."
+  },
+  {
+    id: 'u6q54',
+    unit: 6,
+    questionText: "La 'iluminación global' o 'GI' en renderizado 3D simula:",
+    options: [
+      "Únicamente la luz directa de las fuentes de luz.",
+      "La forma en que la luz rebota e ilumina indirectamente las superficies en una escena.",
+      "El efecto de las luces de neón.",
+      "La iluminación de emergencia de un edificio."
+    ],
+    correctAnswerIndex: 1,
+    explanation: "La Iluminación Global (Global Illumination - GI) es un conjunto de algoritmos que simulan cómo la luz interactúa de forma realista con las superficies, incluyendo los rebotes de luz indirecta, lo que produce sombras más suaves y una iluminación más natural."
+  },
+  {
+    id: 'u6q55',
+    unit: 6,
+    questionText: "El objetivo de 'maquetar un proyecto' con software de autoría multimedia es:",
+    options: [
+      "Crear el modelo 3D del edificio.",
+      "Integrar todos los recursos (imágenes, vídeos, interactividad) para la presentación final.",
+      "Realizar el cálculo de costes de la presentación.",
+      "Imprimir los planos en formato físico."
+    ],
+    correctAnswerIndex: 1,
+    explanation: "En el contexto de presentaciones multimedia, 'maquetar' se refiere a ensamblar e integrar todos los recursos (textos, imágenes, vídeos, sonidos, interactividad) en una aplicación o documento final, siguiendo un guion."
+  },
+  {
+    id: 'u6q56',
+    unit: 6,
+    questionText: "Si al imprimir un plano 2D desde AutoCAD, las líneas discontinuas aparecen continuas, ¿qué se debería revisar primero?",
+    options: [
+      "El color de las líneas.",
+      "La escala del tipo de línea (`LTSCALE`).",
+      "El tipo de papel seleccionado.",
+      "La versión de AutoCAD."
+    ],
+    correctAnswerIndex: 1,
+    explanation: "Si las líneas discontinuas no se ven correctamente, es muy probable que la variable `LTSCALE` (o la escala del tipo de línea del objeto) no esté ajustada adecuadamente para la escala de impresión."
+  },
+  {
+    id: 'u6q57',
+    unit: 6,
+    questionText: "La operación booleana que crea un sólido a partir del volumen que dos o más sólidos tienen en común es:",
+    options: [
+      "Unión",
+      "Diferencia",
+      "Intersección",
+      "Solevación"
+    ],
+    correctAnswerIndex: 2,
+    explanation: "La operación de Intersección crea un nuevo sólido que representa el volumen donde los sólidos originales se superponen o intersecan."
+  },
+  {
+    id: 'u6q58',
+    unit: 6,
+    questionText: "El modelado de superficies en CAD es preferible al de sólidos cuando se necesita:",
+    options: [
+      "Calcular el peso exacto del objeto.",
+      "Un control muy preciso sobre formas curvas y fluidas.",
+      "Crear rápidamente volúmenes prismáticos simples.",
+      "Aplicar operaciones booleanas complejas."
+    ],
+    correctAnswerIndex: 1,
+    explanation: "El modelado de superficies ofrece mayor flexibilidad y control para crear y manipular formas curvas complejas y orgánicas, como las que se encuentran en el diseño industrial o de automoción."
+  },
+  {
+    id: 'u6q59',
+    unit: 6,
+    questionText: "Al preparar una presentación de proyecto, ¿por qué es útil la fotocomposición?",
+    options: [
+      "Para verificar la resistencia estructural del diseño.",
+      "Para mostrar cómo se verá el proyecto integrado en su entorno real.",
+      "Para generar automáticamente los planos de construcción.",
+      "Para reducir el tiempo de renderizado del modelo 3D."
+    ],
+    correctAnswerIndex: 1,
+    explanation: "La fotocomposición permite visualizar de manera realista cómo el edificio o la obra propuesta se integrará en su emplazamiento real, combinando el render con una fotografía del sitio."
+  },
+  {
+    id: 'u6q60',
+    unit: 6,
+    questionText: "El comando `ESPESOR` (THICKEN) en AutoCAD se aplica a objetos de tipo:",
+    options: [
+      "Sólido, para hacerlos más delgados.",
+      "Texto, para darles relieve.",
+      "Superficie, para convertirlas en sólidos con un grosor determinado.",
+      "Línea, para convertirlas en polilíneas."
+    ],
+    correctAnswerIndex: 2,
+    explanation: "El comando `ESPESOR` (THICKEN) se utiliza para dar grosor a objetos de superficie, convirtiéndolos así en objetos sólidos 3D."
   }
 ];
