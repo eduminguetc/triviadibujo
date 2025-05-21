@@ -519,5 +519,266 @@ export const unit2Questions = [
     ],
     correctAnswerIndex: 2,
     explanation: "El croquis se caracteriza por NO utilizar escalas normalizadas estrictas, aunque sí debe mantener la proporción visual del objeto. Se realiza a mano alzada y puede incluir cotas."
+  },
+  // Nuevas 20 preguntas para la Unidad 2
+  {
+    id: 'u2q41',
+    unit: 2,
+    questionText: "Al realizar un croquis de levantamiento, ¿cuál es el primer paso recomendado?",
+    options: [
+      "Acotar todos los detalles pequeños.",
+      "Situarse frente al objeto y abarcarlo visualmente para encajar sus elementos esenciales.",
+      "Elegir los colores para la representación.",
+      "Dibujar la rotulación y el cajetín."
+    ],
+    correctAnswerIndex: 1,
+    explanation: "El primer paso es una observación global, situándose frente al objeto para captar sus proporciones generales y encajar visualmente sus elementos principales antes de detallar."
+  },
+  {
+    id: 'u2q42',
+    unit: 2,
+    questionText: "Si un croquis se realiza para recoger datos en campo, ¿qué elemento es indispensable añadir?",
+    options: [
+      "Una perspectiva artística del entorno.",
+      "La firma de todos los presentes.",
+      "Acotaciones precisas de las medidas tomadas.",
+      "Un análisis de costos preliminar."
+    ],
+    correctAnswerIndex: 2,
+    explanation: "Cuando un croquis se utiliza para levantamiento de datos, la acotación precisa de las medidas es fundamental para su posterior uso en la elaboración de planos detallados."
+  },
+  {
+    id: 'u2q43',
+    unit: 2,
+    questionText: "La 'carátula' en un croquis o plano sirve principalmente para:",
+    options: [
+      "Mostrar el objeto en 3D.",
+      "Contener información identificativa del dibujo (título, autor, fecha).",
+      "Listar los materiales de construcción.",
+      "Indicar las herramientas de dibujo utilizadas."
+    ],
+    correctAnswerIndex: 1,
+    explanation: "La carátula o cajetín es el espacio reservado para la información esencial que identifica el plano o croquis, como el título, autor, fecha, escala (si aplica), etc."
+  },
+  {
+    id: 'u2q44',
+    unit: 2,
+    questionText: "En la perspectiva cónica, si la Línea del Horizonte (LH) está muy alta, el objeto se verá como si estuviera:",
+    options: [
+      "Visto desde abajo (contrapicado).",
+      "Visto a nivel de los ojos.",
+      "Visto desde arriba (picado).",
+      "En verdadera magnitud."
+    ],
+    correctAnswerIndex: 2,
+    explanation: "Una Línea del Horizonte alta sitúa el punto de vista del observador por debajo del objeto, resultando en una vista de contrapicado, mirando hacia arriba."
+  },
+  {
+    id: 'u2q45',
+    unit: 2,
+    questionText: "¿Qué tipo de líneas fugan en una perspectiva frontal o paralela (1 PF)?",
+    options: [
+      "Todas las líneas del objeto.",
+      "Solo las líneas verticales.",
+      "Las líneas perpendiculares al plano del cuadro (líneas de profundidad).",
+      "Ninguna línea fuga en este sistema."
+    ],
+    correctAnswerIndex: 2,
+    explanation: "En la perspectiva frontal (1 PF), las líneas que son perpendiculares al plano del cuadro (es decir, las que representan la profundidad) son las que fugan al único punto de fuga."
+  },
+  {
+    id: 'u2q46',
+    unit: 2,
+    questionText: "La principal diferencia entre una perspectiva cónica y una axonométrica (isométrica, caballera) es que la cónica:",
+    options: [
+      "No muestra profundidad.",
+      "Utiliza proyección paralela.",
+      "Representa los objetos como los ve el ojo humano, con puntos de fuga.",
+      "Siempre muestra todas las caras del objeto en verdadera magnitud."
+    ],
+    correctAnswerIndex: 2,
+    explanation: "La perspectiva cónica simula la visión humana, donde las líneas paralelas parecen converger en puntos de fuga, a diferencia de las axonométricas que usan proyecciones paralelas."
+  },
+  {
+    id: 'u2q47',
+    unit: 2,
+    questionText: "Al croquizar, es importante que el dibujo sea entendido no solo por el autor, sino también por:",
+    options: [
+      "Solo por el cliente final.",
+      "Únicamente por el software CAD.",
+      "Otros profesionales que puedan necesitar interpretar la información.",
+      "Nadie más, es un apunte personal."
+    ],
+    correctAnswerIndex: 2,
+    explanation: "Aunque un croquis puede ser un apunte rápido, si va a ser usado para comunicar ideas o datos, debe ser lo suficientemente claro para que otros profesionales puedan entenderlo."
+  },
+  {
+    id: 'u2q48',
+    unit: 2,
+    questionText: "La 'Línea de Tierra' (LT) en perspectiva es especialmente útil como referencia para:",
+    options: [
+      "Determinar los colores del objeto.",
+      "Medir o estimar alturas y profundidades relativas.",
+      "Establecer el grosor de las líneas.",
+      "Seleccionar el tipo de papel."
+    ],
+    correctAnswerIndex: 1,
+    explanation: "La Línea de Tierra sirve como plano base de referencia en la perspectiva, a partir del cual se pueden medir o proporcionar alturas y profundidades de los objetos."
+  },
+  {
+    id: 'u2q49',
+    unit: 2,
+    questionText: "Un 'croquis de cálculo' podría utilizarse para:",
+    options: [
+      "Presentar la imagen final del proyecto.",
+      "Realizar estimaciones rápidas de dimensiones o cantidades.",
+      "Dibujar detalles artísticos sin medidas.",
+      "Documentar un edificio histórico."
+    ],
+    correctAnswerIndex: 1,
+    explanation: "Un croquis de cálculo es un tipo de boceto que se realiza para ayudar en la estimación o verificación rápida de dimensiones, áreas, o para plantear esquemas de cálculo."
+  },
+  {
+    id: 'u2q50',
+    unit: 2,
+    questionText: "¿Cuál es la principal razón para usar triangulación al croquizar una planta?",
+    options: [
+      "Para que el dibujo parezca más técnico.",
+      "Porque los triángulos son más fáciles de dibujar a mano alzada.",
+      "Para asegurar la rigidez de la forma y evitar deformaciones en la representación.",
+      "Para calcular el área de la planta directamente."
+    ],
+    correctAnswerIndex: 2,
+    explanation: "El triángulo es la única figura geométrica plana indeformable. Medir diagonales (triangulación) ayuda a fijar los ángulos y la forma correcta de un espacio al croquizarlo."
+  },
+  {
+    id: 'u2q51',
+    unit: 2,
+    questionText: "En un croquis de perspectiva oblicua (2 PF), las líneas que representan la altura del objeto se dibujan:",
+    options: [
+      "Fugando a un tercer punto.",
+      "Paralelas a la línea del horizonte.",
+      "Verticales y paralelas entre sí.",
+      "Con un coeficiente de reducción."
+    ],
+    correctAnswerIndex: 2,
+    explanation: "En la perspectiva oblicua con dos puntos de fuga, las líneas verticales del objeto se representan como líneas verticales en el dibujo, paralelas entre sí."
+  },
+  {
+    id: 'u2q52',
+    unit: 2,
+    questionText: "El 'alcance' de un croquis (nivel de detalle, extensión) dependerá principalmente de:",
+    options: [
+      "El tipo de lápiz utilizado.",
+      "El propósito del croquis y el tamaño/complejidad del elemento.",
+      "La hora del día en que se realiza.",
+      "La experiencia previa del dibujante en CAD."
+    ],
+    correctAnswerIndex: 1,
+    explanation: "El nivel de detalle y la extensión de un croquis se adaptan a su finalidad y a la complejidad del objeto o idea que se quiere representar."
+  },
+  {
+    id: 'u2q53',
+    unit: 2,
+    questionText: "Si se croquiza una idea para un mueble, es importante incluir:",
+    options: [
+      "Solo una vista frontal.",
+      "Un análisis de mercado detallado.",
+      "Proporciones adecuadas y cotas aproximadas o deseadas.",
+      "Un manual de ensamblaje completo."
+    ],
+    correctAnswerIndex: 2,
+    explanation: "Incluso para una idea, el croquis debe mostrar proporciones lógicas y se deben añadir cotas, aunque sean aproximadas, para definir el tamaño y forma del mueble."
+  },
+  {
+    id: 'u2q54',
+    unit: 2,
+    questionText: "La 'Línea del Horizonte' en un croquis de paisaje representa:",
+    options: [
+      "El borde inferior del papel.",
+      "La línea donde el cielo parece unirse con la tierra o el mar.",
+      "Una línea diagonal principal de la composición.",
+      "El eje vertical central del dibujo."
+    ],
+    correctAnswerIndex: 1,
+    explanation: "En un paisaje, la Línea del Horizonte es la línea aparente que separa el cielo de la tierra o el agua, y corresponde al nivel de los ojos del observador."
+  },
+  {
+    id: 'u2q55',
+    unit: 2,
+    questionText: "¿Qué NO se requiere para hacer un croquis básico?",
+    options: [
+      "Papel",
+      "Lápiz",
+      "Escalímetro",
+      "Goma de borrar"
+    ],
+    correctAnswerIndex: 2,
+    explanation: "El croquis se realiza a mano alzada y no requiere instrumentos de medición de escala como el escalímetro, aunque sí debe mantener la proporción."
+  },
+  {
+    id: 'u2q56',
+    unit: 2,
+    questionText: "Un croquis puede servir como documento base para luego:",
+    options: [
+      "Construir directamente una estructura compleja.",
+      "Realizar el dibujo técnico detallado en un programa CAD.",
+      "Obtener una licencia de obra sin más trámites.",
+      "Calcular la eficiencia energética del edificio."
+    ],
+    correctAnswerIndex: 1,
+    explanation: "Los croquis, especialmente los de levantamiento o los de diseño preliminar, a menudo sirven como punto de partida para la elaboración de planos técnicos precisos utilizando software CAD."
+  },
+  {
+    id: 'u2q57',
+    unit: 2,
+    questionText: "En la perspectiva aérea (3 PF), si el tercer punto de fuga está muy por encima de la LH, se está representando una vista:",
+    options: [
+      "Frontal a nivel del ojo.",
+      "De picado (vista de pájaro).",
+      "De contrapicado (mirando hacia arriba).",
+      "Isométrica."
+    ],
+    correctAnswerIndex: 2,
+    explanation: "Si el tercer punto de fuga (para las verticales) está muy arriba, se está simulando una vista desde abajo mirando hacia arriba, es decir, un contrapicado, típico de edificios altos."
+  },
+  {
+    id: 'u2q58',
+    unit: 2,
+    questionText: "La principal habilidad que desarrolla el croquizado es:",
+    options: [
+      "El manejo avanzado de software 3D.",
+      "La observación, la proporción y la representación rápida de ideas.",
+      "La redacción de memorias técnicas.",
+      "El cálculo de estructuras complejas."
+    ],
+    correctAnswerIndex: 1,
+    explanation: "El croquizado fomenta la capacidad de observación, la comprensión de las proporciones y la habilidad para plasmar ideas o la realidad de forma gráfica y rápida."
+  },
+  {
+    id: 'u2q59',
+    unit: 2,
+    questionText: "Si un croquis está bien proporcionado, significa que:",
+    options: [
+      "Todas sus líneas tienen el mismo grosor.",
+      "Las relaciones de tamaño entre sus partes son correctas y se asemejan al objeto.",
+      "Está dibujado a una escala normalizada exacta.",
+      "Utiliza al menos tres colores diferentes."
+    ],
+    correctAnswerIndex: 1,
+    explanation: "Un croquis bien proporcionado es aquel cuyas partes guardan una relación de tamaño correcta entre sí, reflejando de manera fiel la apariencia visual del objeto real."
+  },
+  {
+    id: 'u2q60',
+    unit: 2,
+    questionText: "¿Cuál es una desventaja del croquis frente a un plano CAD?",
+    options: [
+      "Su rapidez de ejecución.",
+      "Su menor precisión dimensional y falta de escala exacta.",
+      "Su utilidad para comunicar ideas iniciales.",
+      "Su bajo coste de herramientas."
+    ],
+    correctAnswerIndex: 1,
+    explanation: "Aunque el croquis es rápido y útil, su principal desventaja frente a un plano CAD es la falta de precisión dimensional exacta y de una escala normalizada, lo que lo hace inadecuado para la fabricación o construcción directa sin un posterior detallado."
   }
 ];
