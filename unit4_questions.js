@@ -519,5 +519,266 @@ export const unit4Questions = [
     ],
     correctAnswerIndex: 1,
     explanation: "La capacidad de BIM para coordinar cambios instantáneamente en todo el proyecto se basa en que el modelo es una base de datos relacional. Todas las vistas y documentos son representaciones de esta base de datos única."
+  },
+  // Nuevas 20 preguntas para la Unidad 4
+  {
+    id: 'u4q41',
+    unit: 4,
+    questionText: "El 'Modelado Paramétrico' en BIM significa que los elementos:",
+    options: [
+      "Son estáticos y difíciles de modificar.",
+      "Se definen por parámetros y relaciones que permiten cambios coordinados.",
+      "Solo pueden ser formas geométricas básicas.",
+      "No contienen información adicional más allá de su geometría."
+    ],
+    correctAnswerIndex: 1,
+    explanation: "El modelado paramétrico es clave en BIM. Los elementos se definen con parámetros (dimensiones, materiales) y reglas que, al modificarse, actualizan el modelo de forma inteligente y coordinada."
+  },
+  {
+    id: 'u4q42',
+    unit: 4,
+    questionText: "Una plantilla de proyecto Revit (.RTE) NO suele incluir por defecto:",
+    options: [
+      "Familias cargadas (puertas, ventanas).",
+      "Configuración de unidades y estilos de línea.",
+      "El modelo 3D completo de un proyecto anterior.",
+      "Vistas de plano y alzado predefinidas."
+    ],
+    correctAnswerIndex: 2,
+    explanation: "Una plantilla .RTE contiene configuraciones, familias y vistas base, pero no el modelo 3D completo de un proyecto específico terminado, ya que su propósito es ser un punto de partida."
+  },
+  {
+    id: 'u4q43',
+    unit: 4,
+    questionText: "El comando `UN` en Revit abre el cuadro de diálogo para configurar:",
+    options: [
+      "La interfaz de usuario.",
+      "Las unidades del proyecto.",
+      "Las opciones de deshacer (Undo).",
+      "La información del norte real."
+    ],
+    correctAnswerIndex: 1,
+    explanation: "El atajo de teclado `UN` en Revit accede directamente al cuadro de diálogo 'Unidades de proyecto', donde se configuran las unidades de medida para diferentes disciplinas."
+  },
+  {
+    id: 'u4q44',
+    unit: 4,
+    questionText: "En Revit, si se cierra accidentalmente la Ventana de Propiedades o el Navegador de Proyectos, ¿cómo se pueden reabrir?",
+    options: [
+      "Reiniciando el programa Revit.",
+      "Desde la ficha 'Vista' > grupo 'Ventanas' > 'Interfaz de usuario'.",
+      "Pulsando Ctrl+P y Ctrl+N respectivamente.",
+      "Modificando un archivo de configuración."
+    ],
+    correctAnswerIndex: 1,
+    explanation: "Si se cierran, la Ventana de Propiedades y el Navegador de Proyectos se pueden volver a activar desde la ficha 'Vista', en el grupo 'Ventanas', submenú 'Interfaz de usuario'."
+  },
+  {
+    id: 'u4q45',
+    unit: 4,
+    questionText: "La 'Barra de Estado' en la interfaz de Revit generalmente muestra:",
+    options: [
+      "Una lista de todas las familias cargadas.",
+      "Ayuda contextual e indicaciones sobre el comando activo o la selección.",
+      "Las propiedades del elemento seleccionado.",
+      "Herramientas para crear nuevos niveles."
+    ],
+    correctAnswerIndex: 1,
+    explanation: "La Barra de Estado, en la parte inferior de la interfaz, proporciona información útil sobre el comando actual, lo que Revit espera que hagas a continuación, o información sobre los elementos resaltados."
+  },
+  {
+    id: 'u4q46',
+    unit: 4,
+    questionText: "El comando `RO` (Rotar) en Revit, al aplicarse a un elemento en una vista 2D, lo gira en torno a:",
+    options: [
+      "Un eje horizontal.",
+      "Un eje vertical definido por el usuario.",
+      "Un eje perpendicular al plano de la vista.",
+      "El centro geométrico del proyecto."
+    ],
+    correctAnswerIndex: 2,
+    explanation: "En vistas 2D (como plantas o alzados), la herramienta Rotar gira los elementos alrededor de un eje que es perpendicular al plano de esa vista."
+  },
+  {
+    id: 'u4q47',
+    unit: 4,
+    questionText: "La herramienta 'Matriz' (`AR`) en Revit permite crear copias de elementos en patrones:",
+    options: [
+      "Solo rectangulares.",
+      "Solo circulares.",
+      "Lineales y Radiales (circulares).",
+      "Únicamente a lo largo de una trayectoria."
+    ],
+    correctAnswerIndex: 2,
+    explanation: "La herramienta Matriz en Revit permite crear múltiples ejemplares de elementos organizados en patrones lineales (filas y columnas) o radiales (alrededor de un centro)."
+  },
+  {
+    id: 'u4q48',
+    unit: 4,
+    questionText: "Bloquear un elemento (`PN`) en Revit sirve para:",
+    options: [
+      "Ocultarlo en todas las vistas.",
+      "Impedir su modificación o movimiento accidental.",
+      "Convertirlo en una familia de sistema.",
+      "Asignarle un parámetro de solo lectura."
+    ],
+    correctAnswerIndex: 1,
+    explanation: "Bloquear (Pin) un elemento en Revit fija su posición, evitando que sea movido o eliminado accidentalmente. Es útil para elementos de referencia como rejillas o vínculos."
+  },
+  {
+    id: 'u4q49',
+    unit: 4,
+    questionText: "Los 'Parámetros de Proyecto' en Revit son creados por el usuario y se pueden asignar a:",
+    options: [
+      "Solo a un único elemento en todo el proyecto.",
+      "Múltiples categorías de elementos (ej. muros, puertas, ventanas).",
+      "Únicamente a las plantillas de vista.",
+      "Solo a las familias cargables."
+    ],
+    correctAnswerIndex: 1,
+    explanation: "Los Parámetros de Proyecto son parámetros personalizados que el usuario crea dentro de un proyecto y puede asignar a una o varias categorías de elementos para añadir información específica."
+  },
+  {
+    id: 'u4q50',
+    unit: 4,
+    questionText: "Un archivo .RFA en el contexto de Revit corresponde a:",
+    options: [
+      "Un archivo de proyecto principal.",
+      "Un archivo de plantilla de proyecto.",
+      "Un archivo de familia cargable.",
+      "Un archivo de parámetros compartidos."
+    ],
+    correctAnswerIndex: 2,
+    explanation: "Los archivos con extensión .RFA son archivos de Familias Cargables de Revit, que contienen los datos y la geometría de componentes como puertas, ventanas, mobiliario, etc."
+  },
+  {
+    id: 'u4q51',
+    unit: 4,
+    questionText: "El 'filtrado de selección' en Revit es útil cuando:",
+    options: [
+      "Se quiere cambiar el color de fondo de la vista.",
+      "Hay muchos objetos superpuestos y se necesita seleccionar solo algunos específicos.",
+      "Se desea aplicar una plantilla de vista.",
+      "Se va a crear un nuevo tipo de familia."
+    ],
+    correctAnswerIndex: 1,
+    explanation: "La herramienta Filtro permite refinar una selección múltiple, desmarcando categorías o tipos de elementos no deseados cuando hay muchos objetos juntos o superpuestos."
+  },
+  {
+    id: 'u4q52',
+    unit: 4,
+    questionText: "Las 'Vistas de Diseño' en Revit son útiles para:",
+    options: [
+      "Crear perspectivas 3D fotorrealistas.",
+      "Generar tablas de planificación de materiales.",
+      "Dibujar detalles 2D estándar o insertar información que no forma parte del modelo 3D.",
+      "Definir los niveles principales del edificio."
+    ],
+    correctAnswerIndex: 2,
+    explanation: "Las Vistas de Diseño son vistas 2D que no están directamente vinculadas al modelo 3D. Se usan para crear detalles 2D típicos, leyendas o para importar dibujos de CAD."
+  },
+  {
+    id: 'u4q53',
+    unit: 4,
+    questionText: "Si un símbolo de sección o alzado en Revit aparece de color negro en lugar de azul, generalmente significa que:",
+    options: [
+      "La vista asociada está bloqueada.",
+      "Aún no se ha creado la vista correspondiente a ese símbolo.",
+      "La vista asociada contiene errores.",
+      "El símbolo pertenece a una fase anterior del proyecto."
+    ],
+    correctAnswerIndex: 1,
+    explanation: "Los símbolos de referencia (secciones, alzados, llamadas) aparecen en negro si todavía no se ha generado la vista a la que hacen referencia. Una vez creada la vista, el símbolo se vuelve azul e hipervinculado."
+  },
+  {
+    id: 'u4q54',
+    unit: 4,
+    questionText: "La herramienta 'Cámara' en Revit se utiliza para crear:",
+    options: [
+      "Vistas de planta acotadas.",
+      "Secciones transversales del modelo.",
+      "Vistas en perspectiva 3D.",
+      "Alzados ortogonales."
+    ],
+    correctAnswerIndex: 2,
+    explanation: "La herramienta Cámara permite al usuario definir un punto de vista y una dirección de mirada para generar una vista en perspectiva 3D del modelo."
+  },
+  {
+    id: 'u4q55',
+    unit: 4,
+    questionText: "Modificar la propiedad 'Escala de vista' en la paleta de Propiedades de una vista de planta en Revit afectará a:",
+    options: [
+      "El tamaño real de los objetos del modelo 3D.",
+      "El tamaño con el que se representarán las anotaciones (texto, cotas) y la densidad de los patrones de línea en esa vista.",
+      "Únicamente el tamaño de la ventana de la vista en pantalla.",
+      "El número de niveles visibles en el proyecto."
+    ],
+    correctAnswerIndex: 1,
+    explanation: "La escala de una vista en Revit afecta principalmente a cómo se visualizan y se imprimen los elementos de anotación (texto, cotas, etiquetas) y la apariencia de los patrones de línea, para que sean legibles en el plano final."
+  },
+  {
+    id: 'u4q56',
+    unit: 4,
+    questionText: "Al utilizar el comando 'Reflejar - Seleccionar Eje' (`MM`) en Revit, el eje de simetría es:",
+    options: [
+      "Automáticamente el eje X global.",
+      "Un eje que se dibuja especificando dos puntos.",
+      "Un elemento lineal o un plano de referencia existente que se selecciona.",
+      "Siempre el centro geométrico del objeto a reflejar."
+    ],
+    correctAnswerIndex: 2,
+    explanation: "Con 'Reflejar - Seleccionar Eje' (`MM`), el usuario selecciona una línea, un borde o un plano de referencia existente en el modelo para que actúe como eje de simetría."
+  },
+  {
+    id: 'u4q57',
+    unit: 4,
+    questionText: "La principal ventaja de la metodología BIM sobre CAD en términos de coordinación es:",
+    options: [
+      "La mayor cantidad de colores disponibles para las capas.",
+      "Que los cambios realizados en una vista se actualizan automáticamente en todas las demás.",
+      "La facilidad para dibujar líneas y arcos.",
+      "La compatibilidad con más formatos de archivo."
+    ],
+    correctAnswerIndex: 1,
+    explanation: "Una ventaja fundamental de BIM es la coordinación automática: al trabajar sobre un modelo centralizado, cualquier modificación en un elemento se refleja instantáneamente en todas las vistas y documentos relacionados."
+  },
+  {
+    id: 'u4q58',
+    unit: 4,
+    questionText: "Los 'Niveles' en Revit son elementos de referencia fundamentales para:",
+    options: [
+      "Definir los tipos de materiales del proyecto.",
+      "Establecer alturas y crear vistas de planta asociadas a diferentes plantas del edificio.",
+      "Controlar la visibilidad de las familias cargables.",
+      "Gestionar los parámetros compartidos."
+    ],
+    correctAnswerIndex: 1,
+    explanation: "Los Niveles son planos horizontales de referencia cruciales en Revit que definen las alturas de las diferentes plantas de un edificio y sirven como base para crear vistas de planta y techo."
+  },
+  {
+    id: 'u4q59',
+    unit: 4,
+    questionText: "Si se desea crear un componente de mobiliario muy específico que solo se usará en un proyecto, la opción más adecuada sería crear una:",
+    options: [
+      "Familia de Sistema.",
+      "Familia Cargable nueva y guardarla en la librería.",
+      "Familia In Situ.",
+      "Plantilla de Vista."
+    ],
+    correctAnswerIndex: 2,
+    explanation: "Para elementos únicos y personalizados que no se prevé reutilizar en otros proyectos, la creación de una Familia In Situ directamente en el proyecto es la opción más directa."
+  },
+  {
+    id: 'u4q60',
+    unit: 4,
+    questionText: "La 'Ventana de Propiedades' en Revit muestra los parámetros de:",
+    options: [
+      "Todo el proyecto de forma global.",
+      "La vista activa (si no hay nada seleccionado) o del elemento(s) actualmente seleccionado(s).",
+      "Únicamente las familias de sistema.",
+      "Solo los parámetros de tipo de las familias."
+    ],
+    correctAnswerIndex: 1,
+    explanation: "La Ventana de Propiedades es contextual: si no hay nada seleccionado, muestra las propiedades de la vista activa. Si se selecciona un elemento, muestra los parámetros de ejemplar de ese elemento."
   }
 ];
