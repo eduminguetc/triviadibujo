@@ -519,5 +519,266 @@ export const unit3Questions = [
     ],
     correctAnswerIndex: 2,
     explanation: "La opción 'Inutilizar en ventana gráfica actual' (VP Freeze) oculta los objetos de una capa únicamente en la ventana gráfica activa de una presentación, sin afectar su visibilidad en el espacio modelo u otras ventanas gráficas."
+  },
+  // Nuevas 20 preguntas para la Unidad 3
+  {
+    id: 'u3q41',
+    unit: 3,
+    questionText: "La 'Ficha Inicio' en AutoCAD, que se muestra por defecto al arrancar, proporciona acceso a:",
+    options: [
+      "Solo herramientas de modelado 3D.",
+      "Archivos de plantilla, dibujos recientes y opciones de aprendizaje.",
+      "Únicamente la configuración de impresión.",
+      "La personalización avanzada de la interfaz (CUI)."
+    ],
+    correctAnswerIndex: 1,
+    explanation: "La Ficha Inicio facilita el acceso a acciones iniciales como crear nuevos dibujos desde plantillas, abrir archivos recientes y acceder a recursos de aprendizaje online."
+  },
+  {
+    id: 'u3q42',
+    unit: 3,
+    questionText: "En AutoCAD, ¿qué tipo de coordenadas se basan en el último punto especificado, precedidas por '@'?",
+    options: [
+      "Coordenadas absolutas",
+      "Coordenadas cartesianas únicamente",
+      "Coordenadas relativas",
+      "Coordenadas geográficas"
+    ],
+    correctAnswerIndex: 2,
+    explanation: "Las coordenadas relativas (ej. @X,Y o @Distancia<Ángulo) especifican un punto con respecto al último punto introducido en el dibujo."
+  },
+  {
+    id: 'u3q43',
+    unit: 3,
+    questionText: "El comando `OPCIONES` (OP) en AutoCAD permite ajustar:",
+    options: [
+      "Solo el color de fondo del área de dibujo.",
+      "Una amplia gama de preferencias de la aplicación, como esquemas de color y rutas de archivo.",
+      "Únicamente los parámetros de las cotas.",
+      "El tipo de licencia del software."
+    ],
+    correctAnswerIndex: 1,
+    explanation: "El cuadro de diálogo Opciones (OP) es el centro para configurar múltiples aspectos del comportamiento y apariencia de AutoCAD, incluyendo visualización, trazado, sistema, preferencias de usuario, etc."
+  },
+  {
+    id: 'u3q44',
+    unit: 3,
+    questionText: "La plantilla `acadiso.dwt` en AutoCAD está preconfigurada para trabajar con unidades:",
+    options: [
+      "Imperiales (pulgadas).",
+      "Métricas (milímetros).",
+      "Puntos tipográficos.",
+      "Píxeles."
+    ],
+    correctAnswerIndex: 1,
+    explanation: "La plantilla `acadiso.dwt` está configurada para unidades métricas, asumiendo que las unidades de dibujo son milímetros, y sigue estándares ISO."
+  },
+  {
+    id: 'u3q45',
+    unit: 3,
+    questionText: "El comando `ZOOM` (Z) con la opción 'Extensión' en AutoCAD:",
+    options: [
+      "Aplica zoom a una ventana seleccionada.",
+      "Muestra todos los objetos dibujados ajustándolos al área de visualización.",
+      "Restaura la vista de zoom anterior.",
+      "Aplica un factor de zoom fijo."
+    ],
+    correctAnswerIndex: 1,
+    explanation: "Zoom Extensión (`Z` > `E`) ajusta la vista para que todos los objetos del dibujo (o de la ventana gráfica actual) sean visibles en pantalla."
+  },
+  {
+    id: 'u3q46',
+    unit: 3,
+    questionText: "Si bloqueas una capa en AutoCAD, los objetos en esa capa:",
+    options: [
+      "Se vuelven invisibles.",
+      "No se pueden seleccionar ni editar, pero siguen siendo visibles.",
+      "Se borran del dibujo.",
+      "Se mueven automáticamente a la capa 0."
+    ],
+    correctAnswerIndex: 1,
+    explanation: "Bloquear una capa impide que los objetos en ella sean modificados accidentalmente. Los objetos siguen siendo visibles y se pueden usar para referencia, pero no se pueden editar."
+  },
+  {
+    id: 'u3q47',
+    unit: 3,
+    questionText: "El comando `REGION` en AutoCAD convierte un contorno 2D cerrado en:",
+    options: [
+      "Un bloque con atributos.",
+      "Un objeto de superficie 2D.",
+      "Un sólido 3D.",
+      "Un tipo de línea personalizado."
+    ],
+    correctAnswerIndex: 1,
+    explanation: "El comando `REGION` crea un objeto de región, que es una superficie 2D plana, a partir de un bucle cerrado de objetos coplanares como polilíneas, círculos o arcos."
+  },
+  {
+    id: 'u3q48',
+    unit: 3,
+    questionText: "Para crear un bisel en una esquina con una línea recta en AutoCAD, se usa el comando:",
+    options: [
+      "EMPALME (F)",
+      "CHAFLAN (CHA)",
+      "ALARGAR (EX)",
+      "DESFASE (O)"
+    ],
+    correctAnswerIndex: 1,
+    explanation: "El comando `CHAFLAN` (Chamfer) bisela las aristas de dos objetos 2D o las caras adyacentes de un sólido 3D, creando una transición recta definida por distancias o un ángulo."
+  },
+  {
+    id: 'u3q49',
+    unit: 3,
+    questionText: "La tecla `F3` en AutoCAD se usa comúnmente para:",
+    options: [
+      "Activar/Desactivar el modo Orto.",
+      "Activar/Desactivar la Rejilla.",
+      "Activar/Desactivar la Referencia a Objetos (OSNAP).",
+      "Mostrar la Ayuda."
+    ],
+    correctAnswerIndex: 2,
+    explanation: "La tecla de función `F3` es el atajo estándar para activar o desactivar el modo de Referencia a Objetos (OSNAP)."
+  },
+  {
+    id: 'u3q50',
+    unit: 3,
+    questionText: "Un archivo con extensión `.pat` en AutoCAD se utiliza para definir:",
+    options: [
+      "Estilos de texto.",
+      "Patrones de sombreado personalizados.",
+      "Tipos de línea.",
+      "Configuraciones de página."
+    ],
+    correctAnswerIndex: 1,
+    explanation: "Los archivos `.pat` contienen las definiciones de los patrones de sombreado (hatch patterns) que se pueden cargar y utilizar en AutoCAD."
+  },
+  {
+    id: 'u3q51',
+    unit: 3,
+    questionText: "El comando `ACOANG` (DIMANGULAR) en AutoCAD se utiliza para acotar:",
+    options: [
+      "La longitud de un arco.",
+      "El radio de un círculo.",
+      "El ángulo entre dos líneas o formado por un arco.",
+      "Las coordenadas de un punto."
+    ],
+    correctAnswerIndex: 2,
+    explanation: "El comando `ACOANG` (DIMANGULAR) crea una cota angular, midiendo el ángulo entre dos líneas, el ángulo de un arco, o el ángulo de un vértice de una polilínea."
+  },
+  {
+    id: 'u3q52',
+    unit: 3,
+    questionText: "Si un tipo de línea discontinuo se ve como una línea continua en AutoCAD, un posible ajuste es:",
+    options: [
+      "Aumentar el grosor de la línea.",
+      "Cambiar el color de la capa.",
+      "Ajustar la variable `LTSCALE` o la escala del tipo de línea del objeto.",
+      "Convertir la línea en una polilínea."
+    ],
+    correctAnswerIndex: 2,
+    explanation: "Si los trazos de un tipo de línea discontinuo son demasiado grandes o pequeños para la vista actual, puede parecer continua. Ajustar `LTSCALE` (escala global) o `CELTSCALE` (escala del objeto) suele solucionar esto."
+  },
+  {
+    id: 'u3q53',
+    unit: 3,
+    questionText: "La opción 'PorBloque' (ByBlock) para una propiedad de objeto significa que el objeto:",
+    options: [
+      "Hereda la propiedad de su capa.",
+      "Tiene una propiedad fija que no se puede cambiar.",
+      "Hereda la propiedad asignada a la inserción del bloque que lo contiene.",
+      "Se convierte automáticamente en un bloque."
+    ],
+    correctAnswerIndex: 2,
+    explanation: "Cuando la propiedad de un objeto dentro de una definición de bloque se establece en 'PorBloque', ese objeto adoptará la propiedad (color, tipo de línea, etc.) que se le asigne a la inserción del bloque en el dibujo."
+  },
+  {
+    id: 'u3q54',
+    unit: 3,
+    questionText: "El comando `ESTILO` (STYLE o ST) en AutoCAD se utiliza para crear y modificar:",
+    options: [
+      "Estilos de cota.",
+      "Estilos de trazado.",
+      "Estilos de texto.",
+      "Estilos de tabla."
+    ],
+    correctAnswerIndex: 2,
+    explanation: "El comando `ESTILO` abre el Administrador de Estilos de Texto, donde se pueden crear, modificar y definir estilos de texto (fuente, altura, etc.) para usar en el dibujo."
+  },
+  {
+    id: 'u3q55',
+    unit: 3,
+    questionText: "Al crear una ventana gráfica en una Presentación, ¿qué se debe definir para mostrar correctamente el dibujo del Modelo?",
+    options: [
+      "El tipo de línea de la ventana.",
+      "El color de fondo del Espacio Modelo.",
+      "La escala de la vista dentro de la ventana.",
+      "El nombre del archivo de la plantilla."
+    ],
+    correctAnswerIndex: 2,
+    explanation: "Es crucial definir la escala a la que se mostrará el contenido del Espacio Modelo dentro de cada ventana gráfica en una Presentación para que el plano final sea correcto."
+  },
+  {
+    id: 'u3q56',
+    unit: 3,
+    questionText: "Un 'sello de impresión' en AutoCAD es un texto que se puede añadir automáticamente al trazar, indicando:",
+    options: [
+      "El coste del plano.",
+      "Información como nombre del dibujo, fecha y hora.",
+      "Las coordenadas del origen del dibujo.",
+      "El número de capas utilizadas."
+    ],
+    correctAnswerIndex: 1,
+    explanation: "El sello de impresión es una opción de trazado que permite añadir automáticamente información como el nombre del archivo, la fecha y hora de impresión, la escala, etc., en los márgenes del plano."
+  },
+  {
+    id: 'u3q57',
+    unit: 3,
+    questionText: "El comando `Ctrl+S` en AutoCAD realiza la acción de:",
+    options: [
+      "Seleccionar todos los objetos.",
+      "Guardar el dibujo actual.",
+      "Crear un nuevo estilo.",
+      "Deshacer la última acción."
+    ],
+    correctAnswerIndex: 1,
+    explanation: "La combinación de teclas `Ctrl+S` es el atajo universal para el comando `GUARDAR` (SAVE), que guarda los cambios en el archivo de dibujo actual."
+  },
+  {
+    id: 'u3q58',
+    unit: 3,
+    questionText: "La 'entrada directa de distancia' en AutoCAD consiste en:",
+    options: [
+      "Introducir coordenadas X, Y, Z exactas.",
+      "Seleccionar una distancia de una lista predefinida.",
+      "Mover el cursor para indicar una dirección y luego escribir la distancia.",
+      "Usar una tabla de distancias para acotar."
+    ],
+    correctAnswerIndex: 2,
+    explanation: "Con la entrada directa de distancia, se orienta el cursor en la dirección deseada (a menudo con ayuda de Orto o Polar) y luego se teclea la magnitud de la distancia."
+  },
+  {
+    id: 'u3q59',
+    unit: 3,
+    questionText: "Inutilizar una capa en la ventana gráfica actual (`Inutilizar VP`) es útil para:",
+    options: [
+      "Borrar permanentemente los objetos de esa capa.",
+      "Ocultar información específica en un plano sin afectar otras vistas o el modelo.",
+      "Cambiar el tipo de línea de todos los objetos de la capa.",
+      "Asegurar que la capa siempre se imprima en color."
+    ],
+    correctAnswerIndex: 1,
+    explanation: "Inutilizar una capa en una ventana gráfica específica permite controlar la visibilidad de ciertos elementos en un plano particular (Presentación) sin ocultarlos en el Espacio Modelo o en otras ventanas gráficas."
+  },
+  {
+    id: 'u3q60',
+    unit: 3,
+    questionText: "¿Cuál es el propósito principal de la 'Administración de configuraciones de página' (`ADMINPAG`) en AutoCAD?",
+    options: [
+      "Gestionar las licencias de software.",
+      "Organizar los bloques del dibujo.",
+      "Guardar y reutilizar conjuntos de parámetros de trazado (impresora, papel, escala, etc.).",
+      "Controlar las propiedades de las capas."
+    ],
+    correctAnswerIndex: 2,
+    explanation: "El Administrador de configuraciones de página permite crear, guardar, modificar y aplicar conjuntos de parámetros de trazado (como la impresora, tamaño de papel, tabla de estilos, etc.) a diferentes presentaciones o al espacio modelo."
   }
 ];
