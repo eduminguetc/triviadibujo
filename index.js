@@ -22,9 +22,9 @@ const allQuestions = [
     ...unit8Questions
 ];
 
-// Configuración del juego
-const QUESTIONS_PER_GAME = 25;
-const MIN_QUESTIONS_PER_UNIT = 3;
+// Configuración del juego actualizada
+const QUESTIONS_PER_GAME = 40;
+const MIN_QUESTIONS_PER_UNIT = 5; // Actualizado
 const TOTAL_UNITS = 8;
 
 // Variables de estado del juego
@@ -32,49 +32,40 @@ let currentQuestions = [];
 let currentQuestionIndex = 0;
 let score = 0;
 let incorrectAnswers = 0;
-let lastGameQuestionIds = []; // IDs de las preguntas de la partida anterior
+let lastGameQuestionIds = [];
 
-// Elementos del DOM
+// Elementos del DOM (sin cambios en la asignación)
 let startScreen, gameScreen, endScreen;
 let startGameBtn, nextQuestionBtn, playAgainBtn;
 let questionCounter, scoreCounter;
-let questionTextContainerDOM, questionTextElem; // questionTextContainerDOM es el div, questionTextElem es el h2
-let optionsWrapperDOM, optionsContainer; // optionsWrapperDOM es el div con fondo blanco, optionsContainer es el grid
+let questionTextContainerDOM, questionTextElem;
+let optionsWrapperDOM, optionsContainer;
 let explanationContainer, explanationTitle, explanationTextElem;
 let correctAnswersFinal, incorrectAnswersFinal;
 let errorMessageContainer;
 
-// Función para asignar elementos del DOM
 function assignDOMelements() {
     startScreen = document.getElementById('start-screen');
     gameScreen = document.getElementById('game-screen');
     endScreen = document.getElementById('end-screen');
-    
     startGameBtn = document.getElementById('start-game-btn');
     nextQuestionBtn = document.getElementById('next-question-btn');
     playAgainBtn = document.getElementById('play-again-btn');
-    
     questionCounter = document.getElementById('question-counter');
     scoreCounter = document.getElementById('score-counter');
-    
-    // Elementos actualizados según el nuevo HTML
     questionTextContainerDOM = document.getElementById('question-text-container');
     questionTextElem = document.getElementById('question-text');
     optionsWrapperDOM = document.getElementById('options-wrapper');
     optionsContainer = document.getElementById('options-container');
-    
     explanationContainer = document.getElementById('explanation-container');
     explanationTitle = document.getElementById('explanation-title');
     explanationTextElem = document.getElementById('explanation-text');
-    
     correctAnswersFinal = document.getElementById('correct-answers-final');
     incorrectAnswersFinal = document.getElementById('incorrect-answers-final');
     errorMessageContainer = document.getElementById('error-message-container');
-
     console.log("DOM elements assigned.");
 }
 
-// Función para mezclar un array (Algoritmo Fisher-Yates)
 function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -83,7 +74,7 @@ function shuffleArray(array) {
     return array;
 }
 
-// Lógica de selección de preguntas (igual que la versión anterior)
+// Lógica de selección de preguntas ACTUALIZADA
 function selectNewQuestions() {
     console.log("Selecting new questions. Total available:", allQuestions.length);
     console.log("Last game IDs:", lastGameQuestionIds);
@@ -93,99 +84,124 @@ function selectNewQuestions() {
         questionsByUnit[i] = allQuestions.filter(q => q.unit === i);
     }
 
-    let totalMinQuestionsNeeded = MIN_QUESTIONS_PER_UNIT * TOTAL_UNITS; 
-
+    // Validación inicial: ¿Hay suficientes preguntas por unidad?
     for (let i = 1; i <= TOTAL_UNITS; i++) {
         if (!questionsByUnit[i] || questionsByUnit[i].length < MIN_QUESTIONS_PER_UNIT) {
             const availableCount = questionsByUnit[i] ? questionsByUnit[i].length : 0;
-            console.error(`Insuficientes preguntas en la unidad ${i}. Necesarias: ${MIN_QUESTIONS_PER_UNIT}, Disponibles: ${availableCount}`);
-            return { error: `No hay suficientes preguntas en la unidad ${i}. Se necesitan ${MIN_QUESTIONS_PER_UNIT} y solo hay ${availableCount}.` };
+            const errorMsg = `No hay suficientes preguntas en la unidad ${i}. Se necesitan ${MIN_QUESTIONS_PER_UNIT} y solo hay ${availableCount}.`;
+            console.error(errorMsg);
+            return { error: errorMsg };
         }
     }
-    
-    // Ajustar el número de preguntas si el total disponible es menor que QUESTIONS_PER_GAME pero cumple el mínimo por unidad.
-    const actualQuestionsPerGame = Math.min(QUESTIONS_PER_GAME, allQuestions.length);
-    if (allQuestions.length < QUESTIONS_PER_GAME && allQuestions.length >= totalMinQuestionsNeeded) {
-         console.warn(`Se jugará con ${allQuestions.length} preguntas en lugar de ${QUESTIONS_PER_GAME} debido a la disponibilidad total.`);
-    } else if (allQuestions.length < totalMinQuestionsNeeded) {
-        // Este caso ya está cubierto por la validación de unidad, pero es una doble comprobación.
-        return { error: `No hay suficientes preguntas en total (${allQuestions.length}) para cumplir el mínimo requerido de ${totalMinQuestionsNeeded}.` };
+
+    // Validación inicial: ¿Hay suficientes preguntas en total para el mínimo garantizado?
+    const totalMinGuaranteedNeeded = MIN_QUESTIONS_PER_UNIT * TOTAL_UNITS; // 5 * 8 = 40
+    if (allQuestions.length < totalMinGuaranteedNeeded) {
+        const errorMsg = `No hay suficientes preguntas en total (${allQuestions.length}) para cumplir el mínimo garantizado de ${totalMinGuaranteedNeeded} (5 por unidad).`;
+        console.error(errorMsg);
+        return { error: errorMsg };
     }
+    
+    // El número de preguntas por partida será QUESTIONS_PER_GAME (40)
+    // o el total de preguntas disponibles si es menor que 40 pero cumple el mínimo garantizado.
+    // Dado que QUESTIONS_PER_GAME es ahora 40 y totalMinGuaranteedNeeded también es 40,
+    // si allQuestions.length < 40, ya se habría retornado error.
+    // Así que actualQuestionsPerGame será siempre QUESTIONS_PER_GAME (40) si pasamos las validaciones.
+    const actualQuestionsPerGame = QUESTIONS_PER_GAME;
 
 
     let selectedQuestions = [];
     let selectedIds = new Set();
 
-    // 1. Garantizar representación mínima por unidad
+    // 1. Garantizar representación mínima por unidad (MIN_QUESTIONS_PER_UNIT = 5)
+    console.log("Step 1: Guaranteeing minimum questions per unit.");
     for (let unit = 1; unit <= TOTAL_UNITS; unit++) {
-        let unitQuestionsPool = questionsByUnit[unit] || [];
+        let unitQuestionsPool = shuffleArray([...questionsByUnit[unit]]); // Copia mezclada para esta unidad
         let countForThisUnit = 0;
-        
-        let preferredUnitQuestions = shuffleArray(unitQuestionsPool.filter(q => !lastGameQuestionIds.includes(q.id) && !selectedIds.has(q.id)));
-        
-        for (const question of preferredUnitQuestions) {
-            if (countForThisUnit >= MIN_QUESTIONS_PER_UNIT) break;
-            selectedQuestions.push(question);
-            selectedIds.add(question.id);
-            countForThisUnit++;
-        }
 
-        if (countForThisUnit < MIN_QUESTIONS_PER_UNIT) {
-            let lessPreferredUnitQuestions = shuffleArray(unitQuestionsPool.filter(q => !selectedIds.has(q.id))); 
-            for (const question of lessPreferredUnitQuestions) {
-                if (countForThisUnit >= MIN_QUESTIONS_PER_UNIT) break;
+        // Intento 1: Preguntas no en lastGameQuestionIds y no seleccionadas aún
+        for (const question of unitQuestionsPool) {
+            if (countForThisUnit >= MIN_QUESTIONS_PER_UNIT) break;
+            if (!lastGameQuestionIds.includes(question.id) && !selectedIds.has(question.id)) {
                 selectedQuestions.push(question);
                 selectedIds.add(question.id);
                 countForThisUnit++;
             }
         }
-         if (countForThisUnit < MIN_QUESTIONS_PER_UNIT) {
-            console.error(`Error crítico: No se pudieron seleccionar ${MIN_QUESTIONS_PER_UNIT} para la unidad ${unit}.`);
-            return { error: `Error al seleccionar preguntas para la unidad ${unit}.`};
+        
+        // Intento 2: Si no se alcanzó el mínimo, permitir de lastGameQuestionIds (pero no seleccionadas aún)
+        if (countForThisUnit < MIN_QUESTIONS_PER_UNIT) {
+            console.log(`Unit ${unit}: Attempt 1 yielded ${countForThisUnit}. Need ${MIN_QUESTIONS_PER_UNIT - countForThisUnit} more. Allowing from lastGameQuestionIds.`);
+            for (const question of unitQuestionsPool) {
+                if (countForThisUnit >= MIN_QUESTIONS_PER_UNIT) break;
+                if (!selectedIds.has(question.id)) { // Ya no filtramos por lastGameQuestionIds aquí
+                    selectedQuestions.push(question);
+                    selectedIds.add(question.id);
+                    countForThisUnit++;
+                }
+            }
         }
+        console.log(`Unit ${unit}: Selected ${countForThisUnit} questions.`);
+        // La validación inicial ya asegura que hay suficientes preguntas en cada unidad.
     }
     console.log("Questions after unit guarantee:", selectedQuestions.length, selectedQuestions.map(q=>q.id));
 
-    // 2. Completar aleatoriamente hasta actualQuestionsPerGame
+
+    // 2. Completar aleatoriamente hasta actualQuestionsPerGame (40)
     let remainingQuestionsNeeded = actualQuestionsPerGame - selectedQuestions.length;
+    console.log(`Step 2: Need to complete ${remainingQuestionsNeeded} more questions.`);
 
     if (remainingQuestionsNeeded > 0) {
-        let generalPool1 = shuffleArray(allQuestions.filter(q => !selectedIds.has(q.id) && !lastGameQuestionIds.includes(q.id)));
-        
-        for (const question of generalPool1) {
-            if (selectedQuestions.length >= actualQuestionsPerGame) break;
+        // Pool 1: Preguntas no seleccionadas aún Y NO en lastGameQuestionIds
+        let pool1 = shuffleArray(allQuestions.filter(q => !selectedIds.has(q.id) && !lastGameQuestionIds.includes(q.id)));
+        console.log(`Pool 1 (not in selected, not in last game): ${pool1.length} questions.`);
+        for (const question of pool1) {
+            if (remainingQuestionsNeeded <= 0) break;
             selectedQuestions.push(question);
             selectedIds.add(question.id);
+            remainingQuestionsNeeded--;
         }
+        console.log(`After Pool 1: ${selectedQuestions.length} questions selected. Remaining needed: ${remainingQuestionsNeeded}`);
 
-        if (selectedQuestions.length < actualQuestionsPerGame) {
-            let generalPool2 = shuffleArray(allQuestions.filter(q => !selectedIds.has(q.id)));
-             for (const question of generalPool2) {
-                if (selectedQuestions.length >= actualQuestionsPerGame) break;
+        // Pool 2: Si aún faltan, preguntas no seleccionadas aún (pueden estar en lastGameQuestionIds)
+        if (remainingQuestionsNeeded > 0) {
+            let pool2 = shuffleArray(allQuestions.filter(q => !selectedIds.has(q.id)));
+            console.log(`Pool 2 (not in selected, can be in last game): ${pool2.length} questions.`);
+            for (const question of pool2) {
+                if (remainingQuestionsNeeded <= 0) break;
                 selectedQuestions.push(question);
                 selectedIds.add(question.id);
+                remainingQuestionsNeeded--;
             }
+            console.log(`After Pool 2: ${selectedQuestions.length} questions selected. Remaining needed: ${remainingQuestionsNeeded}`);
         }
     }
-    console.log("Questions after random fill:", selectedQuestions.length, selectedQuestions.map(q=>q.id));
+    
+    // 3. Mezcla Final y Verificación de Cantidad
+    // Si después de los intentos, no se alcanzan las actualQuestionsPerGame (40),
+    // es un problema si el total de allQuestions es >= 40.
+    // Si allQuestions.length es < 40, ya se habría manejado.
+    // Como totalMinGuaranteedNeeded es 40, y actualQuestionsPerGame es 40,
+    // selectedQuestions.length debería ser 40 en este punto.
+
+    if (selectedQuestions.length < actualQuestionsPerGame) {
+        const errorMsg = `No se pudieron seleccionar ${actualQuestionsPerGame} preguntas. Solo se obtuvieron ${selectedQuestions.length}. Revise la lógica o el banco de preguntas.`;
+        console.error(errorMsg);
+        // Esto indica un problema si allQuestions.length >= actualQuestionsPerGame
+        // Si allQuestions.length < actualQuestionsPerGame, la lógica debería haber ajustado actualQuestionsPerGame.
+        // Dado que actualQuestionsPerGame ahora es fijo en 40 (y validado al inicio),
+        // llegar aquí con menos de 40 significa un fallo en la lógica de llenado o una condición no prevista.
+        return { error: errorMsg };
+    }
     
     currentQuestions = shuffleArray(selectedQuestions.slice(0, actualQuestionsPerGame)); 
     console.log("Final selected questions for the game:", currentQuestions.length, currentQuestions.map(q=>q.id));
-    
-    if (currentQuestions.length < totalMinQuestionsNeeded && currentQuestions.length < allQuestions.length && currentQuestions.length > 0) {
-        // Si no se alcanza el mínimo total requerido pero hay preguntas, se advierte.
-         console.warn(`Se seleccionaron ${currentQuestions.length} preguntas, menos que el mínimo ideal de ${totalMinQuestionsNeeded} pero más que cero.`);
-    } else if (currentQuestions.length === 0 && allQuestions.length > 0) {
-        return { error: `No se seleccionaron preguntas. Verifique la lógica de selección.` };
-    } else if (currentQuestions.length < totalMinQuestionsNeeded && allQuestions.length >= totalMinQuestionsNeeded ) {
-         return { error: `No se pudo conformar un set de ${totalMinQuestionsNeeded} preguntas válidas. Solo ${currentQuestions.length} disponibles.` };
-    }
     
     return { questions: currentQuestions };
 }
 
 
-// Función para mostrar la pregunta actual
+// Función para mostrar la pregunta actual (sin cambios)
 function displayQuestion() {
     if (currentQuestionIndex >= currentQuestions.length) {
         endGame();
@@ -194,7 +210,7 @@ function displayQuestion() {
 
     const question = currentQuestions[currentQuestionIndex];
     questionTextElem.textContent = question.questionText;
-    optionsContainer.innerHTML = ''; // Limpiar opciones anteriores
+    optionsContainer.innerHTML = ''; 
 
     const shuffledOptions = question.options.map((option, originalIndex) => ({ text: option, originalIndex }));
     shuffleArray(shuffledOptions);
@@ -214,11 +230,9 @@ function displayQuestion() {
     
     optionsContainer.querySelectorAll('button').forEach(btn => btn.disabled = false);
 
-    // Reiniciar animación para los contenedores de pregunta y opciones
     if (questionTextContainerDOM && optionsWrapperDOM) {
         questionTextContainerDOM.style.animation = 'none';
         optionsWrapperDOM.style.animation = 'none';
-        // Forzar reflow para que la animación se reinicie
         void questionTextContainerDOM.offsetWidth; 
         void optionsWrapperDOM.offsetWidth; 
         questionTextContainerDOM.style.animation = 'fadeInElement 0.5s ease-out forwards';
@@ -226,7 +240,7 @@ function displayQuestion() {
     }
 }
 
-// Manejar clic en una opción
+// Manejar clic en una opción (sin cambios)
 function handleOptionClick(event) {
     const selectedOptionButton = event.target;
     const selectedAnswerOriginalIndex = parseInt(selectedOptionButton.dataset.originalIndex);
@@ -258,12 +272,12 @@ function handleOptionClick(event) {
     updateScoreCounter();
 }
 
-// Actualizar contador de puntuación
+// Actualizar contador de puntuación (sin cambios)
 function updateScoreCounter() {
     scoreCounter.textContent = `Aciertos: ${score} | Fallos: ${incorrectAnswers}`;
 }
 
-// Iniciar el juego
+// Iniciar el juego (con validación actualizada)
 function startGame() {
     console.log("Attempting to start game...");
     errorMessageContainer.textContent = ''; 
@@ -273,6 +287,7 @@ function startGame() {
         errorMessageContainer.textContent = "Error: No hay preguntas cargadas. El juego no puede iniciar.";
         return;
     }
+    // La validación de si hay suficientes preguntas por unidad y en total se hace ahora dentro de selectNewQuestions.
 
     const questionSelectionResult = selectNewQuestions();
 
@@ -287,10 +302,9 @@ function startGame() {
     
     currentQuestions = questionSelectionResult.questions;
     
-    // Si después de la selección, currentQuestions es vacío o no cumple un mínimo absoluto (ej. 1 pregunta)
+    // Validar si se obtuvieron preguntas
     if (!currentQuestions || currentQuestions.length === 0 ) {
-         const minNeededForAnyGame = 1; // O un valor más alto si se considera inviable jugar con menos
-         const msg = `No se pudieron cargar suficientes preguntas para iniciar la partida. Se necesitan al menos ${minNeededForAnyGame} pregunta(s) válida(s) y se obtuvieron ${currentQuestions ? currentQuestions.length : 0}.`;
+         const msg = `No se pudieron cargar preguntas para iniciar la partida. Verifique el banco de preguntas y la lógica de selección.`;
         console.error(msg);
         errorMessageContainer.textContent = msg;
         startScreen.classList.remove('hidden');
@@ -298,44 +312,51 @@ function startGame() {
         endScreen.classList.add('hidden');
         return;
     }
+    // Validar si se alcanzó el número de preguntas esperado para la partida
+    if (currentQuestions.length < QUESTIONS_PER_GAME && allQuestions.length >= QUESTIONS_PER_GAME) {
+        const msg = `Se esperaban ${QUESTIONS_PER_GAME} preguntas, pero solo se seleccionaron ${currentQuestions.length}.`;
+        console.error(msg);
+        errorMessageContainer.textContent = msg;
+        // Podríamos decidir no iniciar el juego aquí si es un error crítico.
+        // Por ahora, se iniciará con las que se tengan, pero es un signo de problema en selectNewQuestions.
+    }
+
 
     currentQuestionIndex = 0;
     score = 0;
     incorrectAnswers = 0;
     
-    updateScoreCounter();
+    updateScoreCounter(); // Actualizar contadores antes de mostrar la primera pregunta
     displayQuestion();
 
     startScreen.classList.add('hidden');
     gameScreen.classList.remove('hidden');
     endScreen.classList.add('hidden');
-    console.log("Game started with questions:", currentQuestions.map(q => q.id));
+    console.log(`Game started with ${currentQuestions.length} questions.`);
 }
 
-// Ir a la siguiente pregunta
+// Ir a la siguiente pregunta (sin cambios)
 function nextQuestion() {
     currentQuestionIndex++;
     displayQuestion();
 }
 
-// Finalizar el juego
+// Finalizar el juego (sin cambios)
 function endGame() {
     correctAnswersFinal.textContent = score;
     incorrectAnswersFinal.textContent = incorrectAnswers;
-    
     lastGameQuestionIds = currentQuestions.map(q => q.id); 
-
     gameScreen.classList.add('hidden');
     endScreen.classList.remove('hidden');
     console.log("Game ended. Last game IDs set:", lastGameQuestionIds);
 }
 
-// Reiniciar el juego
+// Reiniciar el juego (sin cambios)
 function playAgain() {
     startGame();
 }
 
-// Inicialización
+// Inicialización (con validación actualizada)
 document.addEventListener('DOMContentLoaded', () => {
     console.log("DOM fully loaded and parsed");
     assignDOMelements();
@@ -353,15 +374,30 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log("Event listeners assigned.");
     console.log("Total questions loaded initially:", allQuestions.length);
 
-    const minTotalNeeded = MIN_QUESTIONS_PER_UNIT * TOTAL_UNITS;
-    if (allQuestions.length < minTotalNeeded) {
-        const msg = `Advertencia: Hay solo ${allQuestions.length} preguntas. Se necesitan ${minTotalNeeded} para diversidad entre unidades.`;
-        console.warn(msg);
-        if(errorMessageContainer) errorMessageContainer.textContent = msg;
-    } else if (allQuestions.length < QUESTIONS_PER_GAME) {
-        const msg = `Advertencia: Hay ${allQuestions.length} preguntas, menos que las ${QUESTIONS_PER_GAME} deseadas. Se jugará con menos.`;
-        console.warn(msg);
-         if(errorMessageContainer) errorMessageContainer.textContent = msg; 
+    // Validación temprana en la carga de la página
+    const minTotalGuaranteed = MIN_QUESTIONS_PER_UNIT * TOTAL_UNITS;
+    let initialErrorMsg = "";
+
+    for (let i = 1; i <= TOTAL_UNITS; i++) {
+        const unitQs = allQuestions.filter(q => q.unit === i);
+        if (unitQs.length < MIN_QUESTIONS_PER_UNIT) {
+            initialErrorMsg += `Unidad ${i} tiene solo ${unitQs.length} preguntas (necesita ${MIN_QUESTIONS_PER_UNIT}). `;
+        }
+    }
+
+    if (allQuestions.length < QUESTIONS_PER_GAME) {
+         initialErrorMsg += `Total de preguntas (${allQuestions.length}) es menor que las ${QUESTIONS_PER_GAME} deseadas por partida. `;
+    }
+     if (allQuestions.length < minTotalGuaranteed) { // Esta es la condición más crítica para no poder iniciar
+        initialErrorMsg += `El total de preguntas (${allQuestions.length}) es menor que el mínimo garantizado de ${minTotalGuaranteed} ( ${MIN_QUESTIONS_PER_UNIT} por ${TOTAL_UNITS} unidades). El juego no puede iniciar.`;
+        startGameBtn.disabled = true; // Deshabilitar botón de inicio
+        startGameBtn.classList.add('opacity-50', 'cursor-not-allowed');
+    }
+
+
+    if (initialErrorMsg && errorMessageContainer) {
+        errorMessageContainer.textContent = "Advertencia: " + initialErrorMsg.trim();
+        console.warn(initialErrorMsg);
     }
 
     if (startScreen && gameScreen && endScreen) {
