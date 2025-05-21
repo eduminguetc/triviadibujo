@@ -519,5 +519,266 @@ export const unit7Questions = [
     ],
     correctAnswerIndex: 2,
     explanation: "Las maquetas de concepto son rápidas y esquemáticas para explorar ideas, mientras que las de ejecución (o presentación) son muy detalladas, con acabados cuidados y materiales de calidad para mostrar el proyecto final."
+  },
+  // Nuevas 20 preguntas para la Unidad 7
+  {
+    id: 'u7q41',
+    unit: 7,
+    questionText: "Una fresadora CNC es una máquina que opera mediante un proceso de:",
+    options: [
+      "Adición de material.",
+      "Sustracción de material.",
+      "Fusión de material en polvo.",
+      "Curado de resina líquida."
+    ],
+    correctAnswerIndex: 1,
+    explanation: "Las fresadoras CNC son máquinas de fabricación sustractiva que utilizan una herramienta de corte giratoria (fresa) para eliminar material de un bloque y darle forma según un diseño digital."
+  },
+  {
+    id: 'u7q42',
+    unit: 7,
+    questionText: "Para lograr un buen acabado en una maqueta pintada, a menudo es recomendable:",
+    options: [
+      "Aplicar una capa muy gruesa de pintura de una vez.",
+      "Lijar la pieza antes de pintar y aplicar capas finas.",
+      "Pintar directamente sobre restos de pegamento.",
+      "Usar siempre pintura brillante para mayor realismo."
+    ],
+    correctAnswerIndex: 1,
+    explanation: "Para un acabado de pintura liso y profesional, es aconsejable preparar la superficie (lijando si es necesario), aplicar una imprimación si el material lo requiere, y luego aplicar la pintura en capas finas y uniformes."
+  },
+  {
+    id: 'u7q43',
+    unit: 7,
+    questionText: "El término 'CNC' en máquinas como fresadoras o cortadoras láser significa:",
+    options: [
+      "Corte Numérico Computarizado.",
+      "Control Numérico por Ordenador.",
+      "Capacidad Nominal de Corte.",
+      "Componente No Calculado."
+    ],
+    correctAnswerIndex: 1,
+    explanation: "CNC son las siglas de 'Control Numérico por Ordenador' (Computer Numerical Control), lo que indica que la máquina es dirigida por un ordenador que sigue las instrucciones de un diseño digital."
+  },
+  {
+    id: 'u7q44',
+    unit: 7,
+    questionText: "¿Qué tipo de información NO es esencial que aparezca en la base de una maqueta de presentación?",
+    options: [
+      "Leyenda (si hay códigos o símbolos).",
+      "Indicación del Norte.",
+      "Lista detallada de todos los materiales usados en la maqueta.",
+      "Escala gráfica."
+    ],
+    correctAnswerIndex: 2,
+    explanation: "Si bien la leyenda, el norte y la escala gráfica son útiles, una lista exhaustiva de los materiales con los que se construyó la propia maqueta no es una información que se suela incluir en su base."
+  },
+  {
+    id: 'u7q45',
+    unit: 7,
+    questionText: "Las plantillas con formas predefinidas (círculos, muebles) son útiles en maquetismo para:",
+    options: [
+      "Cortar materiales muy gruesos.",
+      "Trazar rápidamente formas estándar y repetitivas.",
+      "Aplicar pegamento de forma uniforme.",
+      "Medir ángulos con precisión."
+    ],
+    correctAnswerIndex: 1,
+    explanation: "Las plantillas permiten trazar de forma rápida y consistente formas comunes o elementos a escala (como muebles, símbolos sanitarios, círculos) sobre el material de la maqueta."
+  },
+  {
+    id: 'u7q46',
+    unit: 7,
+    questionText: "Al representar vehículos en una maqueta a escala 1:200, lo más común es:",
+    options: [
+      "Usar modelos a escala de alta fidelidad con interior detallado.",
+      "Dibujar siluetas simplificadas o usar bloques genéricos.",
+      "Omitirlos siempre para no distraer.",
+      "Representarlos con fotografías a escala."
+    ],
+    correctAnswerIndex: 1,
+    explanation: "A escalas como 1:200, los vehículos se suelen representar de forma muy simplificada, como siluetas o bloques volumétricos, ya que el detalle no sería apreciable y solo sirven para dar idea de escala y uso."
+  },
+  {
+    id: 'u7q47',
+    unit: 7,
+    questionText: "La principal diferencia entre una 'maqueta de concepto' y una 'maqueta de ejecución' radica en:",
+    options: [
+      "El tamaño físico de la maqueta.",
+      "El tipo de pegamento utilizado.",
+      "El nivel de detalle, los materiales y el propósito.",
+      "La persona que construye la maqueta."
+    ],
+    correctAnswerIndex: 2,
+    explanation: "Las maquetas de concepto son rápidas y esquemáticas para explorar ideas, mientras que las de ejecución (o presentación) son muy detalladas, con acabados cuidados y materiales de calidad para mostrar el proyecto final."
+  },
+  {
+    id: 'u7q48',
+    unit: 7,
+    questionText: "El área de trabajo para maquetismo idealmente se divide en zonas para:",
+    options: [
+      "Pintura, secado y exposición.",
+      "Diseño CAD, impresión 3D y ensamblaje.",
+      "Preparación/corte, montaje/acabado, y materiales/herramientas.",
+      "Almacenamiento de planos, maquetas antiguas y herramientas."
+    ],
+    correctAnswerIndex: 2,
+    explanation: "Organizar el espacio de trabajo en zonas dedicadas a preparación y corte, montaje y acabado, y almacenamiento de materiales y herramientas optimiza el flujo de trabajo y la eficiencia."
+  },
+  {
+    id: 'u7q49',
+    unit: 7,
+    questionText: "Una sierra de marquetería es más adecuada para cortar:",
+    options: [
+      "Grandes planchas de cartón pluma.",
+      "Láminas finas de papel.",
+      "Materiales como madera fina, plástico o metal delgado con formas curvas.",
+      "Bloques de poliestireno expandido."
+    ],
+    correctAnswerIndex: 2,
+    explanation: "La sierra de marquetería, con su hoja fina, es ideal para realizar cortes precisos y con curvas en materiales como madera delgada, plásticos o láminas metálicas finas."
+  },
+  {
+    id: 'u7q50',
+    unit: 7,
+    questionText: "La 'capacidad expresiva' de un material en maquetismo se refiere a:",
+    options: [
+      "Su resistencia a la rotura.",
+      "Su habilidad para representar verosímilmente el material real o transmitir una idea.",
+      "Su coste por metro cuadrado.",
+      "Su facilidad para ser reciclado."
+    ],
+    correctAnswerIndex: 1,
+    explanation: "La capacidad expresiva de un material se relaciona con cuán bien puede simular la apariencia y textura del material que se pretende representar en la realidad, o cómo transmite la intención del diseño."
+  },
+  {
+    id: 'u7q51',
+    unit: 7,
+    questionText: "El poliestireno expandido (porexpán) es un material útil para crear:",
+    options: [
+      "Acristalamientos transparentes.",
+      "Estructuras metálicas finas.",
+      "Bases de terreno con relieve o volúmenes ligeros.",
+      "Pequeños detalles mecánicos."
+    ],
+    correctAnswerIndex: 2,
+    explanation: "El poliestireno expandido es ligero y fácil de tallar, por lo que se usa frecuentemente para modelar bases de terreno con topografía o para crear volúmenes internos ligeros en maquetas."
+  },
+  {
+    id: 'u7q52',
+    unit: 7,
+    questionText: "Al pegar las esquinas de un volumen, ¿qué técnica de corte ayuda a obtener un mejor acabado?",
+    options: [
+      "Corte curvo.",
+      "Corte a 90° exactos.",
+      "Corte a 45° (inglete).",
+      "Corte irregular a mano alzada."
+    ],
+    correctAnswerIndex: 2,
+    explanation: "Cortar los bordes de las piezas que se unen en una esquina a 45° (corte a inglete) permite que las caras se unan limpiamente sin que se vea el grosor del material, logrando un mejor acabado."
+  },
+  {
+    id: 'u7q53',
+    unit: 7,
+    questionText: "Representar elementos vegetales en una maqueta sirve, además de para el realismo, para indicar:",
+    options: [
+      "La dirección del viento.",
+      "La escala del conjunto.",
+      "Los puntos de cimentación.",
+      "Las salidas de emergencia."
+    ],
+    correctAnswerIndex: 1,
+    explanation: "Los elementos de ambientación como árboles y vegetación, al igual que las figuras humanas y vehículos, son cruciales para dar una referencia visual de la escala del proyecto."
+  },
+  {
+    id: 'u7q54',
+    unit: 7,
+    questionText: "Las 'propiedades mecánicas' de un material de maqueta se refieren a:",
+    options: [
+      "Su color y textura.",
+      "Su respuesta frente a acciones o fuerzas (resistencia, flexibilidad).",
+      "Su capacidad de conducir electricidad.",
+      "Su origen (natural o sintético)."
+    ],
+    correctAnswerIndex: 1,
+    explanation: "Las propiedades mecánicas describen cómo se comporta un material bajo la acción de fuerzas, incluyendo su resistencia, dureza, flexibilidad, elasticidad, etc."
+  },
+  {
+    id: 'u7q55',
+    unit: 7,
+    questionText: "El uso de 'papeles autoadhesivos con texturas' en maquetas es una técnica rápida para:",
+    options: [
+      "Aumentar la resistencia estructural.",
+      "Simular acabados de materiales (madera, ladrillo, piedra).",
+      "Crear uniones desmontables.",
+      "Modelar el relieve del terreno."
+    ],
+    correctAnswerIndex: 1,
+    explanation: "Los papeles o vinilos autoadhesivos con texturas impresas son una forma rápida y efectiva de simular la apariencia de diferentes materiales de acabado en las superficies de la maqueta."
+  },
+  {
+    id: 'u7q56',
+    unit: 7,
+    questionText: "Una 'maqueta de trabajo' se diferencia de una 'maqueta de concepto' en que la de trabajo suele ser:",
+    options: [
+      "Más abstracta y con materiales más simples.",
+      "Menos detallada y más pequeña.",
+      "Más definida, permitiendo visualizar mejor el interior y el volumen.",
+      "Exclusivamente para exposición."
+    ],
+    correctAnswerIndex: 2,
+    explanation: "Las maquetas de trabajo, utilizadas durante el desarrollo del proyecto, suelen tener un mayor nivel de definición que las de concepto, permitiendo un mejor estudio de los espacios y volúmenes."
+  },
+  {
+    id: 'u7q57',
+    unit: 7,
+    questionText: "La 'impresión 3D' es una técnica de fabricación que construye objetos:",
+    options: [
+      "Eliminando material de un bloque.",
+      "Doblando planchas de metal.",
+      "Añadiendo material capa por capa.",
+      "Mediante moldes y fundición."
+    ],
+    correctAnswerIndex: 2,
+    explanation: "La impresión 3D es un proceso de fabricación aditiva donde el objeto se crea depositando o solidificando material en capas sucesivas a partir de un modelo digital."
+  },
+  {
+    id: 'u7q58',
+    unit: 7,
+    questionText: "Al construir escaleras en una maqueta, es importante considerar:",
+    options: [
+      "Únicamente el color de los peldaños.",
+      "La escala, la geometría (recta, curva) y la tipología constructiva.",
+      "Solo el material de la barandilla.",
+      "Que siempre sean desmontables."
+    ],
+    correctAnswerIndex: 1,
+    explanation: "Para representar escaleras de forma adecuada, se debe tener en cuenta la escala, su forma geométrica (recta, en L, en U, caracol) y cómo están construidas o soportadas."
+  },
+  {
+    id: 'u7q59',
+    unit: 7,
+    questionText: "El uso de 'pinzas' en maquetismo es especialmente útil para:",
+    options: [
+      "Cortar grandes piezas de cartón.",
+      "Aplicar pintura en superficies amplias.",
+      "Seleccionar, sujetar y colocar piezas pequeñas con precisión.",
+      "Lijar bordes curvos."
+    ],
+    correctAnswerIndex: 2,
+    explanation: "Las pinzas de diferentes tipos son herramientas esenciales para manipular con precisión piezas pequeñas, colocarlas en su sitio o sujetarlas mientras se aplica adhesivo."
+  },
+  {
+    id: 'u7q60',
+    unit: 7,
+    questionText: "¿Qué consideración es importante al elegir el grosor del material para las paredes de una maqueta?",
+    options: [
+      "Que sea siempre el material más grueso disponible.",
+      "Que el grosor sea proporcional a la escala para representar el espesor real.",
+      "Que el material sea transparente para ver el interior.",
+      "Que el color del material coincida con el color final."
+    ],
+    correctAnswerIndex: 1,
+    explanation: "Es importante seleccionar un grosor de material que, a la escala de la maqueta, represente adecuadamente el espesor real de las paredes, tanto interiores como exteriores, para una correcta proporción volumétrica."
   }
 ];
