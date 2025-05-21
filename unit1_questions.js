@@ -519,5 +519,266 @@ export const unit1Questions = [
     ],
     correctAnswerIndex: 1,
     explanation: "El plano de proyección, o plano del cuadro, es la superficie (generalmente plana) sobre la cual se proyectan las líneas visuales desde el objeto para formar su representación gráfica."
+  },
+  // Nuevas 20 preguntas para la Unidad 1
+  {
+    id: 'u1q41',
+    unit: 1,
+    questionText: "En el sistema axonométrico, ¿cuál es la característica de la perspectiva trimétrica respecto a los ángulos de los ejes?",
+    options: [
+      "Todos los ángulos son iguales (120º).",
+      "Dos ángulos son iguales y uno diferente.",
+      "Los tres ángulos son diferentes.",
+      "Solo se usan dos ejes."
+    ],
+    correctAnswerIndex: 2,
+    explanation: "En la perspectiva trimétrica, los tres ángulos que forman los ejes de coordenadas entre sí en el plano del dibujo son diferentes, y cada eje tiene una escala de reducción distinta."
+  },
+  {
+    id: 'u1q42',
+    unit: 1,
+    questionText: "¿Qué tipo de proyección se utiliza en la perspectiva cónica?",
+    options: [
+      "Cilíndrica ortogonal.",
+      "Cilíndrica oblicua.",
+      "Proyección con un centro de proyección finito.",
+      "Proyección con un centro de proyección en el infinito."
+    ],
+    correctAnswerIndex: 2,
+    explanation: "La perspectiva cónica emplea un centro de proyección finito (el ojo del observador), desde el cual parten las líneas de proyección hacia el objeto y el plano."
+  },
+  {
+    id: 'u1q43',
+    unit: 1,
+    questionText: "El 'Perfil' en el sistema diédrico es una vista:",
+    options: [
+      "Superior del objeto.",
+      "Frontal del objeto.",
+      "Lateral del objeto.",
+      "Inferior del objeto."
+    ],
+    correctAnswerIndex: 2,
+    explanation: "El perfil es la vista lateral del objeto, obtenida al proyectarlo sobre un plano perpendicular a los planos de alzado y planta."
+  },
+  {
+    id: 'u1q44',
+    unit: 1,
+    questionText: "Un 'corte compuesto' se obtiene cuando se utilizan:",
+    options: [
+      "Un solo plano cortante.",
+      "Dos o más planos cortantes.",
+      "Solo planos horizontales.",
+      "Solo planos verticales."
+    ],
+    correctAnswerIndex: 1,
+    explanation: "Un corte compuesto es aquel que se obtiene al utilizar dos o más planos cortantes (ej. corte quebrado o escalonado) para mostrar diferentes elementos no alineados."
+  },
+  {
+    id: 'u1q45',
+    unit: 1,
+    questionText: "Las 'secciones abatidas sin desplazamiento' se dibujan:",
+    options: [
+      "En un plano aparte a mayor escala.",
+      "Con línea gruesa cerca de la vista.",
+      "Directamente sobre la vista, en la traza del plano de corte, con línea fina.",
+      "Siempre con rayado a 90º."
+    ],
+    correctAnswerIndex: 2,
+    explanation: "Las secciones abatidas sin desplazamiento se giran 90º y se dibujan con línea fina directamente sobre la vista, coincidiendo con la traza del plano de corte."
+  },
+  {
+    id: 'u1q46',
+    unit: 1,
+    questionText: "La gama de grosores de línea normalizados incluye valores como:",
+    options: [
+      "0.10 mm, 0.20 mm, 0.30 mm",
+      "0.25 mm, 0.35 mm, 0.5 mm, 0.7 mm",
+      "1.5 mm, 2.5 mm, 3.5 mm",
+      "Solo grosores mayores a 1 mm."
+    ],
+    correctAnswerIndex: 1,
+    explanation: "La gama normalizada de grosores de línea incluye 0.18 (a veces), 0.25, 0.35, 0.5, 0.7, 1.0, 1.4 y 2.0 mm."
+  },
+  {
+    id: 'u1q47',
+    unit: 1,
+    questionText: "La altura mínima recomendada para textos que incluyen minúsculas es de:",
+    options: [
+      "1.0 mm",
+      "1.8 mm",
+      "2.5 mm",
+      "5.0 mm"
+    ],
+    correctAnswerIndex: 2,
+    explanation: "Para textos que utilizan letras minúsculas, la altura nominal (h) no debe ser inferior a 2.5 mm para asegurar la legibilidad."
+  },
+  {
+    id: 'u1q48',
+    unit: 1,
+    questionText: "El formato de papel A4 es el resultado de doblar un formato A0 ¿cuántas veces?",
+    options: [
+      "Una vez.",
+      "Dos veces.",
+      "Tres veces.",
+      "Cuatro veces."
+    ],
+    correctAnswerIndex: 3,
+    explanation: "A0 -> A1 (1) -> A2 (2) -> A3 (3) -> A4 (4). El formato A4 se obtiene doblando el A0 cuatro veces."
+  },
+  {
+    id: 'u1q49',
+    unit: 1,
+    questionText: "El símbolo de un pequeño trazo oblicuo a 45º como final de cota es común en:",
+    options: [
+      "Dibujo mecánico general.",
+      "Dibujo de joyería.",
+      "Dibujo de construcción y estructuras metálicas.",
+      "Dibujo topográfico."
+    ],
+    correctAnswerIndex: 2,
+    explanation: "En lugar de flechas, en el dibujo de construcción y estructuras metálicas es común utilizar un trazo corto inclinado a 45º como símbolo final de cota."
+  },
+  {
+    id: 'u1q50',
+    unit: 1,
+    questionText: "Las líneas de referencia en acotación sirven para:",
+    options: [
+      "Indicar la escala del dibujo.",
+      "Conectar una nota explicativa o un símbolo con el elemento al que se refiere.",
+      "Definir los márgenes del plano.",
+      "Mostrar las aristas ocultas."
+    ],
+    correctAnswerIndex: 1,
+    explanation: "Las líneas de referencia son líneas finas que unen una nota, un símbolo o una marca de identificación con la parte del dibujo a la que hacen alusión."
+  },
+  {
+    id: 'u1q51',
+    unit: 1,
+    questionText: "¿Qué es un 'triedro trirectángulo' en el contexto del sistema axonométrico?",
+    options: [
+      "Un tipo de perspectiva cónica.",
+      "Un conjunto de tres planos de proyección perpendiculares entre sí.",
+      "Una herramienta de dibujo.",
+      "Un formato de papel especial."
+    ],
+    correctAnswerIndex: 1,
+    explanation: "El sistema axonométrico se fundamenta en la proyección sobre tres planos perpendiculares entre sí, formando un triedro trirectángulo (tres ángulos rectos en el vértice común)."
+  },
+  {
+    id: 'u1q52',
+    unit: 1,
+    questionText: "La 'línea del horizonte' en perspectiva cónica es donde se sitúan:",
+    options: [
+      "Las cotas principales.",
+      "Los títulos del plano.",
+      "Los puntos de fuga.",
+      "Las notas aclaratorias."
+    ],
+    correctAnswerIndex: 2,
+    explanation: "La línea del horizonte representa el nivel de los ojos del observador y es donde convergen las líneas paralelas, ubicándose allí los puntos de fuga."
+  },
+  {
+    id: 'u1q53',
+    unit: 1,
+    questionText: "Un 'corte frontal' es aquel donde el plano cortante es paralelo al:",
+    options: [
+      "Plano de planta.",
+      "Plano de perfil.",
+      "Plano de alzado (frontal).",
+      "Plano del terreno."
+    ],
+    correctAnswerIndex: 2,
+    explanation: "Un corte frontal se produce cuando el plano de corte imaginario es paralelo al plano de proyección frontal (plano del alzado)."
+  },
+  {
+    id: 'u1q54',
+    unit: 1,
+    questionText: "La norma UNE-ISO 5455 se refiere a la normalización de:",
+    options: [
+      "Márgenes y cajetines.",
+      "Escalas.",
+      "Tipos de línea.",
+      "Acotación."
+    ],
+    correctAnswerIndex: 1,
+    explanation: "La norma UNE-ISO 5455 establece las recomendaciones para el uso de escalas en los dibujos técnicos."
+  },
+  {
+    id: 'u1q55',
+    unit: 1,
+    questionText: "Si una pieza es simétrica, ¿qué tipo de representación de corte es especialmente útil?",
+    options: [
+      "Corte completo longitudinal.",
+      "Corte parcial o mordedura.",
+      "Semicorte o medio corte.",
+      "Múltiples secciones abatidas."
+    ],
+    correctAnswerIndex: 2,
+    explanation: "El semicorte o medio corte es ideal para piezas simétricas, ya que permite mostrar la mitad de la pieza en vista exterior y la otra mitad en corte, ahorrando espacio y tiempo."
+  },
+  {
+    id: 'u1q56',
+    unit: 1,
+    questionText: "El símbolo '□' (un cuadrado) antes de una cifra de cota indica que la dimensión corresponde a:",
+    options: [
+      "Una superficie esférica.",
+      "Un lado de una forma cuadrada.",
+      "Un chaflán.",
+      "Una tolerancia geométrica."
+    ],
+    correctAnswerIndex: 1,
+    explanation: "El símbolo de un cuadrado antes de la cifra de cota se utiliza para indicar que esa dimensión corresponde al lado de una sección o forma cuadrada."
+  },
+  {
+    id: 'u1q57',
+    unit: 1,
+    questionText: "La relación recomendada entre el grosor de una línea gruesa y una línea fina es de al menos:",
+    options: [
+      "1:1",
+      "2:1",
+      "3:1",
+      "1:2"
+    ],
+    correctAnswerIndex: 1,
+    explanation: "Se recomienda que el ancho de la línea gruesa sea al menos el doble que el de la línea fina (relación 2:1) para una clara diferenciación visual."
+  },
+  {
+    id: 'u1q58',
+    unit: 1,
+    questionText: "La 'acotación en paralelo' consiste en disponer las cotas:",
+    options: [
+      "Una a continuación de otra, sumando longitudes.",
+      "Todas partiendo de un mismo origen o plano de referencia común.",
+      "Solo para dimensiones angulares.",
+      "Utilizando coordenadas X e Y."
+    ],
+    correctAnswerIndex: 1,
+    explanation: "En la acotación en paralelo, todas las líneas de cota parten de un mismo elemento de referencia (un borde, un eje), mostrando las distancias desde ese origen común."
+  },
+  {
+    id: 'u1q59',
+    unit: 1,
+    questionText: "El formato de papel A1 se obtiene doblando un A0:",
+    options: [
+      "Por su lado corto.",
+      "Por su lado largo.",
+      "Diagonalmente.",
+      "En tres partes iguales."
+    ],
+    correctAnswerIndex: 1,
+    explanation: "Los formatos de la serie A se obtienen doblando el formato inmediatamente superior por la mitad de su lado más largo. Así, A1 es la mitad de un A0."
+  },
+  {
+    id: 'u1q60',
+    unit: 1,
+    questionText: "¿Cuál es la principal función de la línea de trazo y punto gruesa?",
+    options: [
+      "Representar contornos ocultos.",
+      "Indicar ejes de simetría.",
+      "Señalar la trayectoria de planos de corte.",
+      "Limitar vistas parciales."
+    ],
+    correctAnswerIndex: 2,
+    explanation: "La línea de trazo y punto gruesa se utiliza específicamente para indicar la traza o trayectoria de los planos de corte en las vistas."
   }
 ];
