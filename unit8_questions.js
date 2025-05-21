@@ -519,5 +519,266 @@ export const unit8Questions = [
     ],
     correctAnswerIndex: 1,
     explanation: "La separación en origen es el acto de clasificar los residuos en el mismo lugar donde se generan, depositándolos en los contenedores correspondientes para facilitar su posterior reciclaje o tratamiento."
+  },
+  // Nuevas 20 preguntas para la Unidad 8
+  {
+    id: 'u8q41',
+    unit: 8,
+    questionText: "¿Cuál es la función de la 'Memoria' en un proyecto de construcción?",
+    options: [
+      "Listar todos los planos del proyecto.",
+      "Describir el problema, la solución adoptada y justificaciones técnicas.",
+      "Detallar los precios unitarios de cada partida.",
+      "Mostrar vistas 3D del proyecto."
+    ],
+    correctAnswerIndex: 1,
+    explanation: "La Memoria es el documento escrito que describe y justifica el proyecto, explicando el problema a resolver, la solución adoptada, los cálculos básicos y el cumplimiento normativo."
+  },
+  {
+    id: 'u8q42',
+    unit: 8,
+    questionText: "Un 'plotter' o 'trazador' es un periférico de salida utilizado para:",
+    options: [
+      "Escanear documentos de gran formato.",
+      "Imprimir planos y gráficos de gran formato (A1, A0).",
+      "Proyectar imágenes en una pantalla.",
+      "Grabar datos en discos ópticos."
+    ],
+    correctAnswerIndex: 1,
+    explanation: "Los plotters son impresoras especializadas en la impresión de documentos de gran formato, como los planos de arquitectura e ingeniería."
+  },
+  {
+    id: 'u8q43',
+    unit: 8,
+    questionText: "El 'almacenamiento en red' (NAS o servidor) en una oficina de proyectos facilita:",
+    options: [
+      "Únicamente la impresión remota.",
+      "El acceso compartido y centralizado a los archivos del proyecto por varios usuarios.",
+      "La reducción del consumo energético de los ordenadores.",
+      "La creación automática de copias de seguridad en la nube."
+    ],
+    correctAnswerIndex: 1,
+    explanation: "El almacenamiento en red permite que múltiples usuarios accedan y trabajen sobre los mismos archivos de proyecto de forma centralizada, mejorando la colaboración y la gestión de datos."
+  },
+  {
+    id: 'u8q44',
+    unit: 8,
+    questionText: "La 'ergonomía ambiental' en una oficina se preocupa por factores como:",
+    options: [
+      "El diseño del teclado y el ratón.",
+      "La iluminación, el ruido y la temperatura del entorno de trabajo.",
+      "La carga de trabajo y los horarios.",
+      "La altura de la silla y la mesa."
+    ],
+    correctAnswerIndex: 1,
+    explanation: "La ergonomía ambiental se enfoca en las condiciones físicas del entorno de trabajo, como la iluminación, el ruido, la temperatura y la calidad del aire, para asegurar el confort y bienestar."
+  },
+  {
+    id: 'u8q45',
+    unit: 8,
+    questionText: "El 'cambio climático' se diferencia del 'calentamiento global' en que el primero:",
+    options: [
+      "Es un fenómeno natural no afectado por el ser humano.",
+      "Se refiere solo al aumento de la temperatura media.",
+      "Incluye la variabilidad natural del clima y los cambios atribuidos a la actividad humana a largo plazo.",
+      "Solo afecta a las regiones polares."
+    ],
+    correctAnswerIndex: 2,
+    explanation: "El cambio climático es un concepto más amplio que el calentamiento global, abarcando todas las variaciones significativas y duraderas de los patrones climáticos, incluyendo las causadas por la actividad humana."
+  },
+  {
+    id: 'u8q46',
+    unit: 8,
+    questionText: "Las 'energías renovables' son aquellas que:",
+    options: [
+      "Se encuentran en cantidades limitadas y se agotan con su uso.",
+      "Son las más baratas de producir.",
+      "Se producen de forma continua y son virtualmente inagotables (solar, eólica).",
+      "Generan la mayor cantidad de gases de efecto invernadero."
+    ],
+    correctAnswerIndex: 2,
+    explanation: "Las energías renovables provienen de fuentes que se regeneran naturalmente y son consideradas inagotables a escala humana, como la energía solar, eólica, hidráulica o geotérmica."
+  },
+  {
+    id: 'u8q47',
+    unit: 8,
+    questionText: "Al clasificar residuos en una oficina, los cartuchos de tóner y las pilas se consideran:",
+    options: [
+      "Residuos orgánicos.",
+      "Residuos no especiales, mezclables con papel.",
+      "Residuos especiales o peligrosos que requieren gestión específica.",
+      "Materiales de oficina reutilizables directamente."
+    ],
+    correctAnswerIndex: 2,
+    explanation: "Los cartuchos de tóner y las pilas contienen componentes que pueden ser peligrosos para el medio ambiente si no se gestionan adecuadamente, por lo que se clasifican como residuos especiales."
+  },
+  {
+    id: 'u8q48',
+    unit: 8,
+    questionText: "El 'Presupuesto de Ejecución por Contrata' (PEC) o 'Precio Final' suele incluir, además del PEM, GG y BI:",
+    options: [
+      "El coste del solar.",
+      "Los honorarios del proyectista.",
+      "El Impuesto sobre el Valor Añadido (IVA).",
+      "El coste de la licencia de obras."
+    ],
+    correctAnswerIndex: 2,
+    explanation: "El Presupuesto de Ejecución por Contrata (o Precio Final para el cliente) se obtiene sumando el IVA al Presupuesto Base de Licitación (que ya incluye PEM, Gastos Generales y Beneficio Industrial)."
+  },
+  {
+    id: 'u8q49',
+    unit: 8,
+    questionText: "Un 'disco duro externo' es un dispositivo:",
+    options: [
+      "Integrado dentro de la CPU del ordenador.",
+      "De almacenamiento portátil que se conecta usualmente por USB.",
+      "Que solo permite leer datos, no escribirlos.",
+      "Utilizado exclusivamente para la salida de gráficos."
+    ],
+    correctAnswerIndex: 1,
+    explanation: "Un disco duro externo es una unidad de almacenamiento que funciona fuera del ordenador principal y se conecta típicamente mediante un puerto USB, ofreciendo portabilidad y capacidad adicional."
+  },
+  {
+    id: 'u8q50',
+    unit: 8,
+    questionText: "La 'calificación energética' de un edificio, como la obtenida con programas tipo Lider/Calener, indica:",
+    options: [
+      "Su resistencia sísmica.",
+      "Su nivel de eficiencia en el consumo de energía.",
+      "El coste de su construcción por metro cuadrado.",
+      "La calidad de sus acabados interiores."
+    ],
+    correctAnswerIndex: 1,
+    explanation: "La calificación energética (representada por una etiqueta con letras de la A a la G) indica cuán eficiente es un edificio en términos de consumo de energía para calefacción, refrigeración, agua caliente, etc."
+  },
+  {
+    id: 'u8q51',
+    unit: 8,
+    questionText: "La 'reprografía' en el contexto de planos se refiere a:",
+    options: [
+      "El proceso de dibujar los planos originales.",
+      "La corrección de errores en los planos.",
+      "La reproducción o copia de planos y documentos.",
+      "El archivo digital de los planos."
+    ],
+    correctAnswerIndex: 2,
+    explanation: "Reprografía es el conjunto de técnicas para reproducir documentos o dibujos por medios como la fotocopia, la impresión digital, etc."
+  },
+  {
+    id: 'u8q52',
+    unit: 8,
+    questionText: "El 'brillo' o 'luminancia' de un monitor se mide en:",
+    options: [
+      "Hertz (Hz)",
+      "Píxeles por pulgada (PPI)",
+      "Candelas por metro cuadrado (cd/m²)",
+      "Milisegundos (ms)"
+    ],
+    correctAnswerIndex: 2,
+    explanation: "El brillo o luminancia de una pantalla se expresa en candelas por metro cuadrado (cd/m²), indicando la cantidad de luz que puede emitir."
+  },
+  {
+    id: 'u8q53',
+    unit: 8,
+    questionText: "El 'contraste' de un monitor se refiere a la diferencia entre:",
+    options: [
+      "El color más claro y el más oscuro que puede mostrar.",
+      "Su tamaño físico y su resolución.",
+      "Su consumo energético encendido y apagado.",
+      "La velocidad de respuesta y la tasa de refresco."
+    ],
+    correctAnswerIndex: 0,
+    explanation: "La relación de contraste de un monitor mide la diferencia entre los negros más profundos y los blancos más brillantes que puede reproducir, afectando la calidad y el detalle de la imagen."
+  },
+  {
+    id: 'u8q54',
+    unit: 8,
+    questionText: "Una 'biblioteca digital de bloques CAD' contiene:",
+    options: [
+      "Libros digitalizados sobre historia del CAD.",
+      "Colecciones de dibujos pre-hechos (símbolos, componentes) para insertar en planos.",
+      "Tutoriales en vídeo para aprender CAD.",
+      "Foros de discusión para usuarios de CAD."
+    ],
+    correctAnswerIndex: 1,
+    explanation: "Las bibliotecas de bloques CAD son colecciones de dibujos reutilizables (símbolos de mobiliario, sanitarios, detalles constructivos, etc.) que agilizan el proceso de dibujo."
+  },
+  {
+    id: 'u8q55',
+    unit: 8,
+    questionText: "La 'Ley 31/1995 de Prevención de Riesgos Laborales' en España establece:",
+    options: [
+      "Los tipos de software CAD permitidos.",
+      "El marco general para garantizar la seguridad y salud de los trabajadores.",
+      "Las tarifas mínimas para proyectos de edificación.",
+      "Los procedimientos para la gestión de residuos de construcción."
+    ],
+    correctAnswerIndex: 1,
+    explanation: "La Ley 31/1995 es la normativa fundamental en España que establece los principios generales de la prevención de riesgos laborales y las obligaciones de empresarios y trabajadores."
+  },
+  {
+    id: 'u8q56',
+    unit: 8,
+    questionText: "El 'síndrome del edificio enfermo' puede estar relacionado con:",
+    options: [
+      "Una cimentación defectuosa.",
+      "Una mala calidad del aire interior en oficinas.",
+      "Un diseño arquitectónico poco atractivo.",
+      "La antigüedad excesiva del software utilizado."
+    ],
+    correctAnswerIndex: 1,
+    explanation: "El síndrome del edificio enfermo se refiere a un conjunto de síntomas o molestias que experimentan los ocupantes de un edificio, a menudo relacionados con una mala calidad del aire interior (ventilación deficiente, contaminantes)."
+  },
+  {
+    id: 'u8q57',
+    unit: 8,
+    questionText: "Una medida para reducir el consumo de papel en una oficina es:",
+    options: [
+      "Imprimir todos los correos electrónicos.",
+      "Fomentar la lectura y revisión de documentos en pantalla e imprimir a doble cara.",
+      "Utilizar siempre el gramaje de papel más alto.",
+      "Hacer una copia impresa de cada archivo digital."
+    ],
+    correctAnswerIndex: 1,
+    explanation: "Fomentar la revisión digital de documentos y configurar la impresión a doble cara por defecto son medidas efectivas para reducir el consumo de papel."
+  },
+  {
+    id: 'u8q58',
+    unit: 8,
+    questionText: "La 'obsolescencia programada' de los equipos informáticos contribuye al problema de:",
+    options: [
+      "La mejora de la eficiencia energética.",
+      "La reducción de costes de adquisición.",
+      "El aumento de los Residuos de Aparatos Eléctricos y Electrónicos (RAEE).",
+      "La simplificación del software."
+    ],
+    correctAnswerIndex: 2,
+    explanation: "La obsolescencia programada, que acorta la vida útil de los productos, es un factor que incrementa la generación de RAEE, ya que los equipos se desechan más rápidamente."
+  },
+  {
+    id: 'u8q59',
+    unit: 8,
+    questionText: "El 'Plan de Orden y Limpieza' en una oficina es una medida preventiva contra riesgos de:",
+    options: [
+      "Ataques informáticos.",
+      "Caídas, golpes y tropiezos.",
+      "Fatiga visual.",
+      "Estrés laboral."
+    ],
+    correctAnswerIndex: 1,
+    explanation: "Mantener un buen plan de orden y limpieza (cables recogidos, pasillos despejados, almacenamiento adecuado) es fundamental para prevenir accidentes como caídas, golpes y tropiezos."
+  },
+  {
+    id: 'u8q60',
+    unit: 8,
+    questionText: "El 'Anexo de Cálculos' que acompaña a la Memoria de un proyecto suele contener:",
+    options: [
+      "El listado de todos los planos.",
+      "Las justificaciones numéricas de la estructura, instalaciones, etc.",
+      "El presupuesto detallado.",
+      "El estudio de impacto ambiental."
+    ],
+    correctAnswerIndex: 1,
+    explanation: "Los Anejos a la Memoria (o Anexos) contienen los desarrollos de cálculo que justifican las soluciones adoptadas para la estructura, las instalaciones y otros aspectos técnicos del proyecto."
   }
 ];
