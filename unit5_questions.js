@@ -519,5 +519,266 @@ export const unit5Questions = [
     ],
     correctAnswerIndex: 1,
     explanation: "La indicación del Norte geográfico es fundamental para entender la orientación del edificio o la obra, lo cual tiene implicaciones en el soleamiento, vientos, eficiencia energética, etc."
+  },
+  // Nuevas 20 preguntas para la Unidad 5
+  {
+    id: 'u5q41',
+    unit: 5,
+    questionText: "Las normas UNE son emitidas por AENOR y son de aplicación en:",
+    options: [
+      "Toda Europa (normas EN).",
+      "A nivel internacional (normas ISO).",
+      "España.",
+      "Alemania (normas DIN)."
+    ],
+    correctAnswerIndex: 2,
+    explanation: "Las normas UNE (Una Norma Española) son desarrolladas y publicadas por AENOR y son las normas técnicas de aplicación en España."
+  },
+  {
+    id: 'u5q42',
+    unit: 5,
+    questionText: "El formato de papel A2 se obtiene al doblar un formato A1:",
+    options: [
+      "Por su lado corto.",
+      "Por su lado largo.",
+      "En diagonal.",
+      "No se obtiene de A1."
+    ],
+    correctAnswerIndex: 1,
+    explanation: "Siguiendo la serie A, el formato A2 (420x594mm) se obtiene doblando un formato A1 (594x841mm) por la mitad de su lado más largo."
+  },
+  {
+    id: 'u5q43',
+    unit: 5,
+    questionText: "La 'Línea de Referencia' en acotación se utiliza para:",
+    options: [
+      "Indicar el contorno principal del objeto.",
+      "Unir una nota explicativa o un símbolo a un elemento del dibujo.",
+      "Marcar el eje de simetría de una pieza.",
+      "Delimitar el área de dibujo en el formato."
+    ],
+    correctAnswerIndex: 1,
+    explanation: "Las líneas de referencia conectan una nota, símbolo o marca de identificación con la parte específica del dibujo a la que se refieren, aportando información adicional."
+  },
+  {
+    id: 'u5q44',
+    unit: 5,
+    questionText: "La simbología de 'SH' en un plano podría indicar:",
+    options: [
+      "Salida de Humos.",
+      "Suelo Hidráulico.",
+      "Hueco en Suelo.",
+      "Servicio Higiénico."
+    ],
+    correctAnswerIndex: 2,
+    explanation: "Dentro de la simbología de elementos de construcción, 'SH' se utiliza para indicar un 'Hueco en Suelo'."
+  },
+  {
+    id: 'u5q45',
+    unit: 5,
+    questionText: "Un 'Plano de Emplazamiento' define:",
+    options: [
+      "La estructura interna del edificio.",
+      "La localización exacta de la finca o parcela y el edificio dentro de ella.",
+      "Los detalles de las instalaciones eléctricas.",
+      "El tipo de mobiliario a utilizar."
+    ],
+    correctAnswerIndex: 1,
+    explanation: "El Plano de Emplazamiento sitúa con precisión la parcela y la edificación dentro de sus linderos, mostrando accesos y relación con el entorno inmediato."
+  },
+  {
+    id: 'u5q46',
+    unit: 5,
+    questionText: "Los planos de 'Plantas Acotadas' se diferencian de las 'Plantas de Distribución' principalmente en que:",
+    options: [
+      "Las acotadas siempre incluyen mobiliario detallado.",
+      "Las acotadas se centran en las dimensiones y no suelen llevar mobiliario para mayor claridad.",
+      "Las de distribución no llevan nombres de estancias.",
+      "Las de distribución son siempre a escala mayor."
+    ],
+    correctAnswerIndex: 1,
+    explanation: "Las Plantas Acotadas priorizan la representación clara de todas las dimensiones necesarias para la construcción, por lo que suelen omitir el mobiliario que sí aparece en las Plantas de Distribución."
+  },
+  {
+    id: 'u5q47',
+    unit: 5,
+    questionText: "La escala 1:5 se considera una escala de:",
+    options: [
+      "Reducción grande.",
+      "Reducción pequeña o para detalles.",
+      "Ampliación.",
+      "Natural."
+    ],
+    correctAnswerIndex: 1,
+    explanation: "Una escala 1:5 es de reducción, pero se usa para representar objetos o detalles con un tamaño considerable en el plano, permitiendo ver bien sus características."
+  },
+  {
+    id: 'u5q48',
+    unit: 5,
+    questionText: "En un proyecto de obra civil, el 'Perfil Longitudinal' es esencial para definir:",
+    options: [
+      "El ancho de la calzada.",
+      "Las pendientes y rasantes a lo largo del eje de la obra.",
+      "Los detalles de las cunetas.",
+      "La ubicación de las señales de tráfico."
+    ],
+    correctAnswerIndex: 1,
+    explanation: "El Perfil Longitudinal muestra las elevaciones del terreno natural y de la rasante proyectada a lo largo del eje de una obra lineal, siendo clave para definir pendientes y acuerdos verticales."
+  },
+  {
+    id: 'u5q49',
+    unit: 5,
+    questionText: "La norma DIN 18195, mencionada en la unidad, se refiere a simbología para:",
+    options: [
+      "Instalaciones eléctricas.",
+      "Carpintería metálica.",
+      "Impermeabilización y aislamiento.",
+      "Mobiliario urbano."
+    ],
+    correctAnswerIndex: 2,
+    explanation: "La norma alemana DIN 18195 establece simbología para la representación de sistemas de impermeabilización y aislamiento en la construcción."
+  },
+  {
+    id: 'u5q50',
+    unit: 5,
+    questionText: "Un 'Plano de Replanteo' en obra civil debe indicar la posición de la base o bases referidas a:",
+    options: [
+      "Estrellas y constelaciones.",
+      "Marcas, señales o hitos fijos en el terreno.",
+      "La dirección del viento predominante.",
+      "El centro geométrico de la obra únicamente."
+    ],
+    correctAnswerIndex: 1,
+    explanation: "El Plano de Replanteo debe referenciar las bases de replanteo a puntos fijos y reconocibles en el terreno (marcas, señales, hitos, vértices geodésicos) para una correcta materialización de la obra."
+  },
+  {
+    id: 'u5q51',
+    unit: 5,
+    questionText: "La 'universalidad' del dibujo técnico implica que:",
+    options: [
+      "Solo puede ser entendido por arquitectos.",
+      "Debe poder ser interpretado de manera fácil e inequívoca por cualquier técnico con conocimientos de normalización.",
+      "Se dibuja siempre en el mismo idioma.",
+      "Utiliza un único tipo de línea para todo."
+    ],
+    correctAnswerIndex: 1,
+    explanation: "Gracias a la normalización, el dibujo técnico aspira a ser un lenguaje universal, permitiendo que diferentes técnicos puedan interpretar la información de forma consistente."
+  },
+  {
+    id: 'u5q52',
+    unit: 5,
+    questionText: "El objetivo de 'tipificar' en la normalización es:",
+    options: [
+      "Aumentar la variedad de productos y soluciones.",
+      "Reducir el número de tipos o modelos de elementos, fomentando la estandarización.",
+      "Hacer los dibujos más artísticos.",
+      "Complicar los procesos de diseño."
+    ],
+    correctAnswerIndex: 1,
+    explanation: "La tipificación busca reducir la variedad innecesaria de tipos, modelos o dimensiones de componentes, promoviendo la estandarización para simplificar la producción y el intercambio."
+  },
+  {
+    id: 'u5q53',
+    unit: 5,
+    questionText: "Si un plano de arquitectura muestra un símbolo de una cama y una mesita de noche, ¿en qué tipo de planta es más probable encontrarlo?",
+    options: [
+      "Planta de cimentación.",
+      "Planta de estructura.",
+      "Planta de distribución o de mobiliario.",
+      "Planta de cubierta."
+    ],
+    correctAnswerIndex: 2,
+    explanation: "La representación del mobiliario, como camas y mesitas, es característica de las Plantas de Distribución o de las Plantas de Mobiliario, que ayudan a visualizar el uso y la escala de los espacios."
+  },
+  {
+    id: 'u5q54',
+    unit: 5,
+    questionText: "La información sobre los materiales de acabado de los suelos de cada habitación se representa típicamente en:",
+    options: [
+      "Planos de estructura.",
+      "Planos de acabados.",
+      "Planos de situación.",
+      "Alzados."
+    ],
+    correctAnswerIndex: 1,
+    explanation: "Los Planos de Acabados especifican los materiales de revestimiento para suelos, paredes y techos, usualmente mediante códigos o leyendas sobre las plantas de distribución."
+  },
+  {
+    id: 'u5q55',
+    unit: 5,
+    questionText: "Un 'Plano de Estado Actual' es especialmente importante en proyectos de:",
+    options: [
+      "Obra nueva en un solar completamente vacío y plano.",
+      "Rehabilitación o intervención en edificaciones o terrenos existentes.",
+      "Diseño de mobiliario.",
+      "Creación de software CAD."
+    ],
+    correctAnswerIndex: 1,
+    explanation: "En proyectos de rehabilitación o que involucran terrenos con preexistencias, el Plano de Estado Actual es fundamental para documentar las condiciones iniciales antes de la intervención."
+  },
+  {
+    id: 'u5q56',
+    unit: 5,
+    questionText: "La 'Norma 3.1-IC Trazado' del Ministerio de Fomento español se refiere a:",
+    options: [
+      "El trazado de instalaciones eléctricas en edificios.",
+      "El diseño geométrico de carreteras.",
+      "El trazado de líneas en dibujos técnicos.",
+      "El trazado de redes de saneamiento urbano."
+    ],
+    correctAnswerIndex: 1,
+    explanation: "La Norma 3.1-IC 'Trazado', parte de la Instrucción de Carreteras, establece los criterios y parámetros para el diseño geométrico de carreteras en España."
+  },
+  {
+    id: 'u5q57',
+    unit: 5,
+    questionText: "En un Perfil Transversal de una carretera en desmonte, ¿qué se representa?",
+    options: [
+      "Solo la calzada y las cunetas.",
+      "El terreno natural y la sección de la carretera, mostrando la excavación necesaria.",
+      "Únicamente el terreno natural.",
+      "La vista en alzado del talud."
+    ],
+    correctAnswerIndex: 1,
+    explanation: "Un perfil transversal en zona de desmonte muestra cómo la sección de la carretera se encaja en el terreno natural, indicando las áreas de excavación (desmonte) en los taludes."
+  },
+  {
+    id: 'u5q58',
+    unit: 5,
+    questionText: "La simbología 'PT' en un plano de construcción podría significar:",
+    options: [
+      "Punto Topográfico.",
+      "Planta Techo.",
+      "Pasatubos.",
+      "Pilar Troncocónico."
+    ],
+    correctAnswerIndex: 2,
+    explanation: "Dentro de la simbología de elementos constructivos, 'PT' se utiliza comúnmente para designar un 'Pasatubos', un hueco previsto para el paso de instalaciones."
+  },
+  {
+    id: 'u5q59',
+    unit: 5,
+    questionText: "La representación de un sumidero o una arqueta se encontraría en un plano de:",
+    options: [
+      "Estructura.",
+      "Acabados.",
+      "Saneamiento o Drenaje.",
+      "Carpintería."
+    ],
+    correctAnswerIndex: 2,
+    explanation: "Los sumideros y arquetas son componentes de los sistemas de evacuación de aguas, por lo que su representación se incluye en los planos de saneamiento, drenaje o alcantarillado."
+  },
+  {
+    id: 'u5q60',
+    unit: 5,
+    questionText: "¿Cuál es la principal razón para que los planos de un proyecto sean 'vinculantes para el contratista'?",
+    options: [
+      "Porque son los más bonitos estéticamente.",
+      "Porque definen gráficamente y con precisión lo que se debe construir, sirviendo de base contractual.",
+      "Porque incluyen el precio final de la obra.",
+      "Porque son los únicos documentos que el contratista recibe."
+    ],
+    correctAnswerIndex: 1,
+    explanation: "Los planos son vinculantes porque especifican gráficamente los detalles, dimensiones y características de la obra a ejecutar, formando parte esencial del contrato entre el promotor y el contratista."
   }
 ];
